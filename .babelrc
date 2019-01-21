@@ -1,0 +1,48 @@
+{
+  "presets": ["es2015", "react"],
+  "env": {
+    "testing": {
+      "presets": ["es2015", "react"],
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-async-to-generator"
+      ]
+    },
+    "production": {
+      "presets": ["es2015", "react"],
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "displayName": false,
+            "minify": true
+          }
+        ],
+        "transform-object-rest-spread",
+        "transform-async-to-generator"
+      ]
+    },
+    "development": {
+      "presets": [["es2015", { "modules": false }], "react"],
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "displayName": true,
+            "minify": false
+          }
+        ],
+        [
+          "transform-runtime",
+          {
+            "regenerator": true
+          }
+        ],
+        "transform-object-rest-spread",
+        "transform-async-to-generator"
+      ]
+    }
+  }
+}

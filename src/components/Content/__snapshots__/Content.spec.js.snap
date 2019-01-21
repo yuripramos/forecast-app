@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<styled.div>
+  <Container>
+    <Row>
+      <Column>
+        <styled.h1>
+          You will be presented with 10 True or False questions
+        </styled.h1>
+        <styled.h2>
+          Can you score 100%?
+        </styled.h2>
+        <Button
+          className={null}
+          disabled={false}
+          isCallToAction={true}
+          onClick={null}
+          opacity={1}
+          to="/quiz"
+          type="button"
+          width={null}
+        >
+          BEGIN
+        </Button>
+      </Column>
+    </Row>
+  </Container>
+</styled.div>
+`;
