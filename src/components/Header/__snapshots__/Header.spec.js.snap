@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should match snapshot with props 1`] = `
+<styled.header>
+  <Container>
+    <Row>
+      <Column
+        width="auto"
+      >
+        <styled.h1>
+          Trivia Game
+        </styled.h1>
+        <styled.h2>
+           Welcome to the Trivia Challenge 
+        </styled.h2>
+        <Hide
+          above={null}
+          below="lg"
+        >
+          <styled.div>
+            <styled.div>
+              <Icon
+                color="#FFFFFF"
+                height={33}
+                type="AndroidLogo"
+                width={33}
+              />
+            </styled.div>
+            <styled.div>
+              <Icon
+                color={null}
+                height={33}
+                type="AppleLogo"
+                width={33}
+              />
+            </styled.div>
+            <styled.div>
+              <Icon
+                color={null}
+                height={33}
+                type="MicrosoftLogo"
+                width={33}
+              />
+            </styled.div>
+          </styled.div>
+        </Hide>
+      </Column>
+    </Row>
+  </Container>
+</styled.header>
+`;

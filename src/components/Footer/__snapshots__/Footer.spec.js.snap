@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should match snapshot 1`] = `
+<styled.div>
+  <Container>
+    <Row>
+      <SocialNetworks
+        description="San varius placerat. Vestibulum sed placerat ante, et varicerat ante, et varicerat ante, et"
+        title="Say Hi & Get in Touch"
+      />
+    </Row>
+    <Row>
+      <Column>
+        <styled.div>
+          <styled.a
+            key="0"
+          >
+            Contact
+          </styled.a>
+          <styled.a
+            key="1"
+          >
+            Download
+          </styled.a>
+          <styled.a
+            key="2"
+          >
+            Press
+          </styled.a>
+          <styled.a
+            key="3"
+          >
+            Email
+          </styled.a>
+          <styled.a
+            key="4"
+          >
+            Support
+          </styled.a>
+        </styled.div>
+      </Column>
+    </Row>
+  </Container>
+</styled.div>
+`;
