@@ -11,7 +11,7 @@ function Content() {
           <Column>
             <Title>An title</Title>
             <SubTitle>subtitle</SubTitle>
-            <Button to={"/quiz"} opacity={1} isCallToAction>
+            <Button to={"/forecast"} opacity={1} isCallToAction>
               start
             </Button>
           </Column>
