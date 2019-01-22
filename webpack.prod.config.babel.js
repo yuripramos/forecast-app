@@ -19,7 +19,8 @@ const DefinePlugin = new webpack.DefinePlugin({
     NODE_ENV: JSON.stringify("production")
   },
   API_URL: JSON.stringify("https://api.darksky.net/forecast"),
-  SECRET_KEY: JSON.stringify("1af3f94f02d94fb425b5eee315915259")
+  SECRET_KEY: JSON.stringify("1af3f94f02d94fb425b5eee315915259"),
+  REVERSE_PROXY: JSON.stringify("https://thingproxy.freeboard.io/fetch")
 });
 
 const ExtractTextPluginCSS = new ExtractTextPlugin({

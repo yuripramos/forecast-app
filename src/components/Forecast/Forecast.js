@@ -6,10 +6,10 @@ import { string, arrayOf, shape, number, func, bool } from "prop-types";
 class Forecast extends Component {
   async componentDidMount() {
     this.props.getForecast(37.8267, -122.4233);
+    console.log("forecast resp", forecast);
   }
   render() {
     const { forecast } = this.props;
-    console.log("forecast resp", forecast);
     return (
       <ContentWrapper>
         <Container>
@@ -26,7 +26,7 @@ Forecast.defaultProps = {};
 
 Forecast.propTypes = {
   getForecast: func,
-  forecast: arrayOf(string)
+  forecast: shape
 };
 
 export default Forecast;

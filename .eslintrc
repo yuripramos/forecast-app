@@ -8,6 +8,7 @@
   "globals": {
     "API_URL": true,
     "SECRET_KEY": true,
+    "REVERSE_PROXY": true,
     "jest": true,
     "test": true,
     "expect": true,
