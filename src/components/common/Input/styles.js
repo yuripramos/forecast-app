@@ -1,34 +1,43 @@
 import styled, { css } from "styled-components";
 import { rem } from "../../../styles/tools";
-import { white, grey30, black50, darkBlue } from "../../../styles/settings";
+import { white, grey30, black50 } from "../../../styles/settings";
 
 export const InputField = styled.input`
-  width: 30%;
-  height: ${rem(25)};
-  border-radius: ${rem(4)};
-  background-color: ${white};
-  border: solid ${rem(1)} ${grey30};
-  letter-spacing: ${rem(0.8)};
-  color: ${black50};
-  padding: 0 ${rem(52)};
-  transition: 0.3s padding, 0.3s border;
-
-  ::-ms-clear {
-    display: none !important;
+  height: ${rem(45)};
+  margin: 1em 0 4em;
+  padding: 0;
+  letter-spacing: 0.025em;
+  background: transparent;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  border-bottom: solid thin white;
+  color: #e8e8e8;
+  color: rgba(255, 255, 255, 0.7);
+  ::-webkit-input-placeholder {
+    color: white;
+    opacity: 0.35;
   }
-
+  ::-moz-placeholder {
+    color: white;
+    opacity: 0.35;
+  }
+  ::-ms-input-placeholder {
+    color: white;
+    opacity: 0.35;
+  }
+  ::-moz-placeholder {
+    color: white;
+    opacity: 0.35;
+  }
   :focus {
     outline: none;
-    border: solid ${rem(1)} ${darkBlue};
+    color: white;
+    ::-webkit-input-placeholder {
+      color: white;
+      opacity: 0.7;
+    }
   }
-`;
-
-export const InputWrapper = styled.div`
-  width: 100%;
-  display: inline-flex;
-  position: relative;
-  height: ${rem(26)};
-
   ${({ width }) =>
     width &&
     css`
@@ -36,10 +45,10 @@ export const InputWrapper = styled.div`
     `};
 `;
 
-export const Label = styled.label`
-  pointer-events: none;
-  transition: 0.3s top, 0.2s color, 0.3s font-size;
-  font-family: "Helveticaneue Medium";
-  font-size: ${rem(16)};
-  transform: translateY(5px);
+export const InputWrapper = styled.div`
+  width: 100%;
+  display: inline-flex;
+  position: relative;
+  height: ${rem(26)};
+  justify-content: center;
 `;

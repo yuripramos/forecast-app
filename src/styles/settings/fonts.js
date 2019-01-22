@@ -2,10 +2,6 @@ import { injectGlobal } from "styled-components";
 /* eslint-disable */
 
 const fonts = {
-  Pacifico: [
-    require("../../assets/fonts/Pacifico/Pacifico.woff2"),
-    require("../../assets/fonts/Pacifico/Pacifico.woff")
-  ],
   "Helveticaneue Thin": [
     require("../../assets/fonts/Helveticaneue/helveticaneue.woff2"),
     require("../../assets/fonts/Helveticaneue/helveticaneue.woff")
@@ -15,13 +11,13 @@ const fonts = {
     require("../../assets/fonts/Helveticaneue/HelveticaNeue-medium.woff")
   ],
 
-  "MyriadPro Bold": [
-    require("../../assets/fonts/Myriadpro/myriadpro-bold.woff2"),
-    require("../../assets/fonts/Myriadpro/myriadpro-bold.woff")
+  "RobotoSlab Regular": [
+    require("../../assets/fonts/Roboto/RobotoSlab-Regular.woff2"),
+    require("../../assets/fonts/Roboto/RobotoSlab-Regular.woff")
   ],
-  "MyriadPro SemiBold": [
-    require("../../assets/fonts/Myriadpro/myriadpro-semibold.woff2"),
-    require("../../assets/fonts/Myriadpro/myriadpro-semibold-webfont.woff")
+  "RobotoSlab Thin": [
+    require("../../assets/fonts/Roboto/RobotoSlab-Thin.woff2"),
+    require("../../assets/fonts/Roboto/RobotoSlab-Thin.woff")
   ],
   "Novecento Bold": [
     require("../../assets/fonts/Novecento/Novecentosanswide-Bold-webfont.woff2"),

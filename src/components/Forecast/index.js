@@ -4,9 +4,10 @@ import Forecast from "./Forecast";
 import Forecastactions from "../../actions/Forecast";
 
 export default connect(
-  ({ getForecast, forecast }) => ({
+  ({ getForecast, forecast, search }) => ({
     getForecast,
-    forecast
+    forecast,
+    search
   }),
   Forecastactions
 )(Forecast);

@@ -10,5 +10,14 @@ export default () => ({
     return {
       forecast: getForecastRequest
     };
+  },
+  handleUserInput: (state, e) => {
+    const { value } = e.target;
+    return {
+      search: {
+        ...state.search,
+        city: value
+      }
+    };
   }
 });

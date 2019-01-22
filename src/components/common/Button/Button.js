@@ -53,7 +53,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
   children: node.isRequired, // eslint-disable-line
-  isCalltoAction: bool,
+  isCallToAction: bool,
   disabled: bool,
   type: string,
   width: string,

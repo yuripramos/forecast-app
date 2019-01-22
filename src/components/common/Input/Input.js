@@ -1,19 +1,20 @@
 import React from "react";
 import { string, number, oneOfType, bool } from "prop-types";
-import { InputWrapper, InputField, Label } from "./styles";
+import { InputWrapper, InputField } from "./styles";
 // import Icon from "../Icon";
 
-function Input({ width, type, value, placeholder, checked, label, ...props }) {
+function Input({ width, height, type, value, placeholder, checked, ...props }) {
   return (
-    <InputWrapper width={width}>
-      {label && <Label>{label}</Label>}
+    <InputWrapper>
       <InputField
         {...props}
+        width={width}
         required
         type={type}
         value={value}
         name={name}
         checked={checked}
+        height={height}
         placeholder={placeholder}
       />
     </InputWrapper>
@@ -34,9 +35,9 @@ Input.propTypes = {
   placeholder: string,
   type: string,
   name: string,
-  label: string,
   width: number,
   checked: bool,
+  height: number,
   value: oneOfType([number, string])
 };
 
