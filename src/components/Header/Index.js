@@ -4,9 +4,10 @@ import Header from "./Header";
 import Forecastactions from "../../actions/Forecast";
 
 export default connect(
-  ({ handleUserInput, search }) => ({
+  ({ handleUserInput, search, clearSearch }) => ({
     handleUserInput,
-    search
+    search,
+    clearSearch
   }),
   Forecastactions
 )(Header);

@@ -6,8 +6,10 @@ import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
 class Forecast extends Component {
   async componentDidMount() {
-    this.props.getForecast(37.8267, -122.4233);
-    console.log("forecast resp", this.props.forecast);
+    const { forwardGeocode, search, clearSearch } = this.props;
+    console.log("search here", search);
+    forwardGeocode(search.city);
+    clearSearch();
   }
   render() {
     const { forecast, search } = this.props;
@@ -37,7 +39,7 @@ Forecast.defaultProps = {};
 
 Forecast.propTypes = {
   getForecast: func,
-  forecast: shape
+  forecast: func
 };
 
 export default Forecast;

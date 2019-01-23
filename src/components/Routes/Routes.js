@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import Content from "../Content";
 import Forecast from "../Forecast";
 import Layout from "../common/Layout";
 
@@ -9,7 +8,7 @@ class Routes extends Component {
     return (
       <Switch>
         <Layout>
-          <Route exact path="/" component={Content} />
+          <Route exact path="/" component={Forecast} />
           <Route>
             <Switch>
               <Route path="/forecast" component={Forecast} />

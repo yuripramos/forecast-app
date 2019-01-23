@@ -5,7 +5,8 @@ import { shape, func, string } from "prop-types";
 import Button from "../common/Button";
 import Input from "../common/Input";
 
-function Header({ handleUserInput, search }) {
+function Header({ handleUserInput, search, clearSearch, forwardGeocode }) {
+  console.log("loaded");
   return (
     <HeaderWrapper>
       <Container>
@@ -22,7 +23,9 @@ function Header({ handleUserInput, search }) {
               <Input
                 onChange={handleUserInput}
                 value={search.city}
-                placeholder={"type the city name to forecast !"}
+                placeholder={
+                  "type the city name to forecast or neighboorhood + city !"
+                }
                 height={40}
                 width={100}
                 type="text"
@@ -30,7 +33,8 @@ function Header({ handleUserInput, search }) {
               />
               <Button
                 width={"80"}
-                // onClick={() => closeHandler(onClose)}
+                to={{ pathname: "/forecast", search: `?search=${search.city}` }}
+                onClick={() => forwardGeocode(search.city)}
               >
                 SEARCH
               </Button>
@@ -52,6 +56,7 @@ Header.defaultProps = {
 
 Header.propTypes = {
   handleUserInput: func,
+  clearSearch: func,
   search: shape({
     city: string
   })
