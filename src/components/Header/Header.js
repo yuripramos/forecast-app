@@ -6,7 +6,6 @@ import Button from "../common/Button";
 import Input from "../common/Input";
 
 function Header({ handleUserInput, search, clearSearch, forwardGeocode }) {
-  console.log("loaded");
   return (
     <HeaderWrapper>
       <Container>

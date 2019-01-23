@@ -6,9 +6,15 @@ import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
 class Forecast extends Component {
   async componentDidMount() {
-    const { forwardGeocode, search, clearSearch } = this.props;
-    console.log("search here", search);
-    forwardGeocode(search.city);
+    const {
+      forwardGeocode,
+      search,
+      clearSearch,
+      geometry,
+      updatedCity
+    } = this.props;
+    search && forwardGeocode(search.city);
+    console.log("geo", geometry, "city", updatedCity);
     clearSearch();
   }
   render() {

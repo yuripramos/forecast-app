@@ -1,6 +1,5 @@
 const commonState = {
-  questions: [],
-  counter: 1
+  citiesSearched: []
 };
 
 export default commonState;

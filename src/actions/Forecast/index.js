@@ -1,10 +1,17 @@
 import * as FORECAST_API from "../../services/Forecast";
 
-export default () => ({
+export default state => ({
   forwardGeocode: async (_, city) => {
     const forwardGeoCodeRequest = await FORECAST_API.getForwardGeoCode(city);
-    console.log("resp forward", forwardGeoCodeRequest);
+    const updatedCity =
+      forwardGeoCodeRequest.results.length > 1
+        ? forwardGeoCodeRequest.results[0]
+        : forwardGeoCodeRequest.results;
+    console.log(updatedCity);
     return {
+      updatedCity: updatedCity.formatted,
+      // citiesSearched: [...state.citiesSearched, updatedCity.formatted],
+      geometry: updatedCity.geometry,
       respForward: forwardGeoCodeRequest
     };
   },

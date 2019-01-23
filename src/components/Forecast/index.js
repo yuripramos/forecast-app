@@ -10,14 +10,18 @@ export default connect(
     search,
     forwardGeocode,
     respForward,
-    clearSearch
+    clearSearch,
+    geometry,
+    updatedCity
   }) => ({
     getForecast,
     forecast,
     search,
     forwardGeocode,
     respForward,
-    clearSearch
+    clearSearch,
+    geometry,
+    updatedCity
   }),
   Forecastactions
 )(Forecast);
