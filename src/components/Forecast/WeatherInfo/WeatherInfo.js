@@ -9,7 +9,7 @@ import {
   SidebarContentWrapper,
   InnerContentWrapper
 } from "./styles";
-import ClearDay from "../../../components/common/Icon/ClearDay";
+import getIcon from "../../../utils/getIcon";
 
 import { Container, Row, Column } from "../../../styles/grid";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
@@ -23,7 +23,8 @@ class WeatherInfo extends Component {
       day,
       wind,
       humidity,
-      icon
+      icon,
+      summary
     } = this.props;
     return (
       <ContentWrapper>
@@ -33,12 +34,12 @@ class WeatherInfo extends Component {
               <City>{city}</City>
               <InnerContentWrapper>
                 <MainContentWrapper>
-                  <Icon><ClearDay width="190px" height="190px" /></Icon>
+                  <Icon>{getIcon(icon, "170px", "170px")}</Icon>
                   <Temperature> {temperature} </Temperature>
                 </MainContentWrapper>
                 <SidebarContentWrapper>
                   <TinySpecs>{day}</TinySpecs>
-                  <TinySpecs>Clear night </TinySpecs>
+                  <TinySpecs>{summary}</TinySpecs>
                   <TinySpecs> Wind: {wind} </TinySpecs>
                   <TinySpecs> Humidity: {humidity} </TinySpecs>
                 </SidebarContentWrapper>

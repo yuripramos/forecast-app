@@ -44,7 +44,8 @@ class Forecast extends Component {
                   day={moment.unix(currently.time).format("lll")}
                   wind={`${currently.windSpeed} ${translate("WIND_SPEED")}`}
                   humidity={formatHumidity(currently.humidity)}
-                  icon={"clear-day"}
+                  icon={currently.icon}
+                  summary={currently.summary}
                 />
               </Column>
             </Row>

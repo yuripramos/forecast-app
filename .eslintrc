@@ -26,6 +26,7 @@
     "import/no-extraneous-dependencies": 0,
     "import/no-named-as-default": 0,
     "import/no-named-as-default-member": 0,
+    "react/display-name": 0,
     "linebreak-style": 0,
     "quotes": 0,
     "react/require-extension": "off",
