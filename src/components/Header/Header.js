@@ -5,7 +5,7 @@ import { shape, func, string } from "prop-types";
 import Button from "../common/Button";
 import Input from "../common/Input";
 
-function Header({ handleUserInput, search, clearSearch, forwardGeocode }) {
+function Header({ handleUserInput, search, forwardGeocode }) {
   return (
     <HeaderWrapper>
       <Container>

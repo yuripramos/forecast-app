@@ -1,17 +1,15 @@
 import * as FORECAST_API from "../../services/Forecast";
 
-export default state => ({
-  forwardGeocode: async (_, city) => {
+export default ()=> ({
+  forwardGeocode: async (state, city) => {
     const forwardGeoCodeRequest = await FORECAST_API.getForwardGeoCode(city);
-    const updatedCity =
-      forwardGeoCodeRequest.results.length > 1
-        ? forwardGeoCodeRequest.results[0]
-        : forwardGeoCodeRequest.results;
-    console.log(updatedCity);
     return {
-      updatedCity: updatedCity.formatted,
-      // citiesSearched: [...state.citiesSearched, updatedCity.formatted],
-      geometry: updatedCity.geometry,
+      isFilled: forwardGeoCodeRequest.status === 200,
+      updatedCity: state.search.city,
+      citiesSearched: [...state.citiesSearched, state.search.city],
+      longitude: forwardGeoCodeRequest.data.longitude,
+      nextWeekStats: forwardGeoCodeRequest.data.daily.data,
+      currently: forwardGeoCodeRequest.data.currently,
       respForward: forwardGeoCodeRequest
     };
   },
@@ -34,9 +32,8 @@ export default state => ({
     };
   },
   clearSearch: () => {
-    console.log("called clear");
     return {
-      search: {}
+      search: {},
     };
   }
 });

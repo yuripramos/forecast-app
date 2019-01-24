@@ -9,33 +9,41 @@ class Forecast extends Component {
     const {
       forwardGeocode,
       search,
-      clearSearch,
-      geometry,
-      updatedCity
+      clearSearch
     } = this.props;
-    search && forwardGeocode(search.city);
-    console.log("geo", geometry, "city", updatedCity);
+    search && await forwardGeocode(search.city);
     clearSearch();
+
   }
   render() {
-    const { forecast, search } = this.props;
+    const {
+      forecast,
+      search,
+      updatedCity,
+      isFilled,
+      citiesSearched,
+      nextWeekStats,
+      currently
+    } = this.props;
     return (
       <ContentWrapper>
-        <Container>
-          <Row>
-            <Column>
-              <WeatherInfo
-                city={"Curitiba"}
-                country={"Brazil"}
-                temperature={"30C"}
-                day={"Tuesday"}
-                time="19:50"
-                wind={"10.1 mph"}
-                humidity={"22%"}
-              />
-            </Column>
-          </Row>
-        </Container>
+        {isFilled && (
+          <Container>
+            <Row>
+              <Column>
+                <WeatherInfo
+                  city={"Curitiba"}
+                  country={"Brazil"}
+                  temperature={"30C"}
+                  day={"Tuesday"}
+                  time="19:50"
+                  wind={"10.1 mph"}
+                  humidity={"22%"}
+                />
+              </Column>
+            </Row>
+          </Container>
+        )}
       </ContentWrapper>
     );
   }

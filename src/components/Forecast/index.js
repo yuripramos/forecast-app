@@ -12,7 +12,11 @@ export default connect(
     respForward,
     clearSearch,
     geometry,
-    updatedCity
+    updatedCity,
+    isFilled,
+    citiesSearched,
+    nextWeekStats,
+    currently
   }) => ({
     getForecast,
     forecast,
@@ -21,7 +25,11 @@ export default connect(
     respForward,
     clearSearch,
     geometry,
-    updatedCity
+    updatedCity,
+    isFilled,
+    citiesSearched,
+    nextWeekStats,
+      currently
   }),
   Forecastactions
 )(Forecast);
