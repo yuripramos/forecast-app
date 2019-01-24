@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { ContentWrapper } from "./styles";
 import { Container, Row, Column } from "../../styles/grid";
 import WeatherInfo from "./WeatherInfo";
-import Icon from "../common/Icon";
 import { white } from "../../styles/settings";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
 import moment from "moment";
@@ -45,7 +44,7 @@ class Forecast extends Component {
                   day={moment.unix(currently.time).format("lll")}
                   wind={`${currently.windSpeed} ${translate("WIND_SPEED")}`}
                   humidity={formatHumidity(currently.humidity)}
-                  icon={<Icon type="Menu" color={white} />}
+                  // icon={<Icon type="Menu" color={white} />}
                 />
               </Column>
             </Row>

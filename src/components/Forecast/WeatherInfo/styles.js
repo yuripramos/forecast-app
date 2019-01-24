@@ -13,7 +13,12 @@ export const City = styled.div`
   text-transform: uppercase;
   color: #e8e8e8;
   color: rgba(255, 255, 255, 0.7);
-  font-family: "RobotoSlab Regular";
+  font-family: "OpenSans Regular";
+`;
+
+export const Icon = styled.span`
+  width: ${rem(30)};
+  height: ${rem(30)};
 `;
 
 export const Temperature = styled.h1`
@@ -30,7 +35,7 @@ export const TinySpecs = styled.h3`
   letter-spacing: 0.025em;
   margin: 0;
   padding: 0;
-  font-family: "RobotoSlab Regular";
+  font-family: "OpenSans Thin";
 `;
 
 export const MainContentWrapper = styled.div`

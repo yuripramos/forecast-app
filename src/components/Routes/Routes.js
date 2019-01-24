@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Forecast from "../Forecast";
+
 import Layout from "../common/Layout";
 class Routes extends Component {
   render() {

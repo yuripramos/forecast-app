@@ -2,8 +2,7 @@ import App from "./App";
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import store from "../utils/store";
-import "./App.css";
-import "../styles/settings/fonts";
+
 
 function Root() {
   return (

@@ -5,7 +5,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { white, green, green20, black30 } from "../../../styles/settings";
 
 export const ButtonTag = styled.button`
-  font-family: "Helveticaneue Medium";
+  font-family: "RobotoSlab Regular";
   border-radius: ${rem(4)};
   border: 0;
   cursor: pointer;

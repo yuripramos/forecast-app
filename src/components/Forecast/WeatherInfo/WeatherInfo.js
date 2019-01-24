@@ -3,8 +3,8 @@ import {
   ContentWrapper,
   Temperature,
   City,
-  Icon,
   TinySpecs,
+  Icon,
   MainContentWrapper,
   SidebarContentWrapper
 } from "./styles";
@@ -20,7 +20,7 @@ class WeatherInfo extends Component {
       day,
       time,
       wind,
-      humidity, icon
+      humidity
     } = this.props;
     return (
       <ContentWrapper>
@@ -33,7 +33,7 @@ class WeatherInfo extends Component {
                 </City>
                 <MainContentWrapper>
                   <Temperature> {temperature} </Temperature>
-                  <Icon>{icon}</Icon>
+                  <Icon>ICONE</Icon>
                 </MainContentWrapper>
                 <SidebarContentWrapper>
                   <TinySpecs>{day}</TinySpecs>

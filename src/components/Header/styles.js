@@ -17,7 +17,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const Title = styled.h1`
-  font-family: "RobotoSlab Regular";
+  font-family: "OpenSans Regular";
   font-size: ${rem(25)};
   text-align: center;
   color: ${white};
@@ -29,7 +29,7 @@ export const TitleWrapper = styled.div`
 `;
 
 export const SubTitle = styled.h2`
-  font-family: "RobotoSlab Regular";
+  font-family: "OpenSans Regular";
   font-size: ${rem(10)};
   text-align: center;
   color: ${white};
