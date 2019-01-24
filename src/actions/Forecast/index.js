@@ -10,7 +10,8 @@ export default ()=> ({
       longitude: forwardGeoCodeRequest.data.longitude,
       nextWeekStats: forwardGeoCodeRequest.data.daily.data,
       currently: forwardGeoCodeRequest.data.currently,
-      respForward: forwardGeoCodeRequest
+      respForward: forwardGeoCodeRequest,
+      unit: forwardGeoCodeRequest.data.flags.units
     };
   },
   getForecast: async (_, latitude, longitute) => {

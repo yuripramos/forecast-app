@@ -1,5 +1,4 @@
 import axios from "axios";
-import moment from "moment";
 
 export async function getForecast(latitude, longitute) {
   try {
@@ -22,7 +21,7 @@ export async function getForwardGeoCode(city) {
       return axios.get(
         `${REVERSE_PROXY}/${API_URL}/${SECRET_KEY}/${
           updatedCity.geometry.lat
-        },${updatedCity.geometry.lng}`
+        },${updatedCity.geometry.lng}?units=auto`
       );
     }).then(res => {
       return res;

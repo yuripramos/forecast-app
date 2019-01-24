@@ -16,7 +16,8 @@ export default connect(
     isFilled,
     citiesSearched,
     nextWeekStats,
-    currently
+    currently,
+    unit
   }) => ({
     getForecast,
     forecast,
@@ -29,7 +30,8 @@ export default connect(
     isFilled,
     citiesSearched,
     nextWeekStats,
-      currently
+    currently,
+    unit
   }),
   Forecastactions
 )(Forecast);

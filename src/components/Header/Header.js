@@ -56,6 +56,7 @@ Header.defaultProps = {
 Header.propTypes = {
   handleUserInput: func,
   clearSearch: func,
+  forwardGeocode: func,
   search: shape({
     city: string
   })

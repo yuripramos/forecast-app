@@ -3,7 +3,9 @@ import { ContentWrapper } from "./styles";
 import { Container, Row, Column } from "../../styles/grid";
 import WeatherInfo from "./WeatherInfo";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
-
+import moment from "moment";
+// import { translate } from "../../utils/i18n";
+import { formatHumidity } from "../../utils/formatNumber";
 class Forecast extends Component {
   async componentDidMount() {
     const {
@@ -23,8 +25,11 @@ class Forecast extends Component {
       isFilled,
       citiesSearched,
       nextWeekStats,
-      currently
+      currently,
+      respForward,
+      unit
     } = this.props;
+    console.log(respForward, unit);
     return (
       <ContentWrapper>
         {isFilled && (
@@ -32,13 +37,11 @@ class Forecast extends Component {
             <Row>
               <Column>
                 <WeatherInfo
-                  city={"Curitiba"}
-                  country={"Brazil"}
-                  temperature={"30C"}
-                  day={"Tuesday"}
-                  time="19:50"
-                  wind={"10.1 mph"}
-                  humidity={"22%"}
+                  city={updatedCity}
+                  temperature={`${currently.temperature}`}
+                  day={moment.unix(currently.time).format("lll")}
+                  wind={currently.windSpeed}
+                  humidity={formatHumidity(currently.humidity)}
                 />
               </Column>
             </Row>

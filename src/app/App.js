@@ -6,6 +6,7 @@ import "./App.css";
 import "../styles/settings/fonts";
 import Routes from "../components/Routes";
 import { Router } from "react-router-dom";
+// import { withI18n } from "../utils/i18n";
 import history from "../services/history";
 import { rem } from "../styles/tools";
 import Footer from "../components/Footer";
