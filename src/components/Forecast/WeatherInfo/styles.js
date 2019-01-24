@@ -5,6 +5,14 @@ export const ContentWrapper = styled.div`
   text-align: center;
   padding: ${rem(15)} ${rem(10)};
   min-height: ${rem(250)};
+  width: 70%;
+  display: inline-block;
+`;
+export const InnerContentWrapper = styled.div`
+  text-align: center;
+  padding: ${rem(15)} ${rem(10)};
+  min-height: ${rem(250)};
+  display:inline-flex;
 `;
 
 export const City = styled.div`
@@ -13,12 +21,14 @@ export const City = styled.div`
   text-transform: uppercase;
   color: #e8e8e8;
   color: rgba(255, 255, 255, 0.7);
-  font-family: "OpenSans Regular";
+  font-family: "RobotoSlab Thin";
+  font-size: ${rem(22)};
+  padding: 0 ${rem(15)};
 `;
 
-export const Icon = styled.span`
-  width: ${rem(30)};
-  height: ${rem(30)};
+export const Icon = styled.div`
+  width: 100%;
+  height: ${rem(150)};
 `;
 
 export const Temperature = styled.h1`
@@ -26,6 +36,8 @@ export const Temperature = styled.h1`
   font-weight: 300;
   line-height: 0.75;
   font-family: "RobotoSlab Regular";
+  margin-top: ${rem(20)};
+  width: 100%;
 `;
 
 export const TinySpecs = styled.h3`
@@ -36,20 +48,25 @@ export const TinySpecs = styled.h3`
   margin: 0;
   padding: 0;
   font-family: "OpenSans Thin";
+  width: 100%;
+  margin: ${rem(10)} 0;
+  :nth-child(2n) {
+    margin: ${rem(2)} 0;
+  }
 `;
 
 export const MainContentWrapper = styled.div`
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-content: flex-start;
-  width: 70%;
-  border: solid 1px blue;
+  width: 65%;
+  flex-wrap: wrap;
 `;
 
 export const SidebarContentWrapper = styled.div`
   display: flex;
-  justify-content: content;
-  align-content: flex-end;
-  width: 30%;
-  border: solid 1px red;
+  width: 35%;
+  flex-wrap: wrap;
+  text-align: right;
+  height: ${rem(180)};
 `;

@@ -23,7 +23,7 @@ function Header({ handleUserInput, search, forwardGeocode }) {
                 onChange={handleUserInput}
                 value={search.city}
                 placeholder={
-                  "type the city name to forecast or neighboorhood + city !"
+                  "city, country or neighborhood, city to forecast =)"
                 }
                 height={40}
                 width={100}
@@ -32,7 +32,10 @@ function Header({ handleUserInput, search, forwardGeocode }) {
               />
               <Button
                 width={"80"}
-                to={{ pathname: "/forecast", search: `?search=${search.city}` }}
+                to={{
+                  pathname: "/forecast",
+                  search: `?search=${search.city}`
+                }}
                 onClick={() => forwardGeocode(search.city)}
               >
                 SEARCH

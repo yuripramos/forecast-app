@@ -6,8 +6,11 @@ import {
   TinySpecs,
   Icon,
   MainContentWrapper,
-  SidebarContentWrapper
+  SidebarContentWrapper,
+  InnerContentWrapper
 } from "./styles";
+import ClearDay from "../../../components/common/Icon/ClearDay";
+
 import { Container, Row, Column } from "../../../styles/grid";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
@@ -18,30 +21,28 @@ class WeatherInfo extends Component {
       country,
       temperature,
       day,
-      time,
       wind,
-      humidity
+      humidity,
+      icon
     } = this.props;
     return (
       <ContentWrapper>
         <Container>
           <Row>
             <Column>
-              <ContentWrapper>
-                <City>
-                  {city}
-                </City>
+              <City>{city}</City>
+              <InnerContentWrapper>
                 <MainContentWrapper>
+                  <Icon><ClearDay width="190px" height="190px" /></Icon>
                   <Temperature> {temperature} </Temperature>
-                  <Icon>ICONE</Icon>
                 </MainContentWrapper>
                 <SidebarContentWrapper>
                   <TinySpecs>{day}</TinySpecs>
-                  <TinySpecs> {time} </TinySpecs>
-                  <TinySpecs> {wind} </TinySpecs>
-                  <TinySpecs> {humidity} </TinySpecs>
+                  <TinySpecs>Clear night </TinySpecs>
+                  <TinySpecs> Wind: {wind} </TinySpecs>
+                  <TinySpecs> Humidity: {humidity} </TinySpecs>
                 </SidebarContentWrapper>
-              </ContentWrapper>
+              </InnerContentWrapper>
             </Column>
           </Row>
         </Container>

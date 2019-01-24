@@ -5,7 +5,7 @@ export const black40 = "#222222";
 export const trueBlack = "#000000";
 
 export const lighestgrey = "#d3dde4";
-export const lightpurple = "#b9f";
+export const lightpurple = "#986cef";
 export const grey = "#ccc";
 export const white = "#FFF";
 export const green = "#91e035";
