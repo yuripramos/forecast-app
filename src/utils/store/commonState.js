@@ -1,5 +1,8 @@
+import { INITIAL_UNIT } from "../i18n";
+
 const commonState = {
-  citiesSearched: []
+  citiesSearched: [],
+  unit: INITIAL_UNIT
 };
 
 export default commonState;

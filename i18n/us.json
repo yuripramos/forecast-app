@@ -1,3 +1,6 @@
 {
-  "TEMPERATURE": "℉"
+  "TEMPERATURE": "℉",
+  "TEMPERATURE_MIN": "℉",
+  "WIND_SPEED": "mph",
+  "VISIBILITY": "miles"
 }

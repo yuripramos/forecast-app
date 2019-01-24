@@ -1,12 +1,10 @@
 import React, { Fragment } from "react";
-import ReactDOM from "react-dom";
+
 import { Provider } from "redux-zero/react";
 import { ThemeProvider } from "styled-components";
-import "./App.css";
-import "../styles/settings/fonts";
 import Routes from "../components/Routes";
 import { Router } from "react-router-dom";
-// import { withI18n } from "../utils/i18n";
+import { withI18n } from "../utils/i18n";
 import history from "../services/history";
 import { rem } from "../styles/tools";
 import Footer from "../components/Footer";
@@ -31,5 +29,4 @@ function App() {
     </Provider>
   );
 }
-
-ReactDOM.render(<App />, document.getElementById("app"));
+export default withI18n(App);

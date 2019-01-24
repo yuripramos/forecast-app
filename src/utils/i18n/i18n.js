@@ -23,11 +23,11 @@ export function getUnit() {
 }
 
 export function isUS() {
-  return unit === "US";
+  return unit === "us";
 }
 
 export function isSI() {
-  return unit === "SI";
+  return unit === "si";
 }
 
 
@@ -62,7 +62,6 @@ export const withI18n = WrappedComponent => {
 
     async componentDidMount() {
       const self = this;
-
       this.unlistenUnit = this.props.subscribe(async function(state) {
         const unitProp =
           state.unit

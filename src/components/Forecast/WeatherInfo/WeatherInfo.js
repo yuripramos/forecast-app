@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { ContentWrapper, Temperature, City, TinySpecs } from "./styles";
+import {
+  ContentWrapper,
+  Temperature,
+  City,
+  Icon,
+  TinySpecs,
+  MainContentWrapper,
+  SidebarContentWrapper
+} from "./styles";
 import { Container, Row, Column } from "../../../styles/grid";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
@@ -12,7 +20,7 @@ class WeatherInfo extends Component {
       day,
       time,
       wind,
-      humidity
+      humidity, icon
     } = this.props;
     return (
       <ContentWrapper>
@@ -21,13 +29,18 @@ class WeatherInfo extends Component {
             <Column>
               <ContentWrapper>
                 <City>
-                  {city}, {country}{" "}
+                  {city}
                 </City>
-                <Temperature> {temperature} </Temperature>
-                <TinySpecs>{day}</TinySpecs>
-                <TinySpecs> {time} </TinySpecs>
-                <TinySpecs> {wind} </TinySpecs>
-                <TinySpecs> {humidity} </TinySpecs>
+                <MainContentWrapper>
+                  <Temperature> {temperature} </Temperature>
+                  <Icon>{icon}</Icon>
+                </MainContentWrapper>
+                <SidebarContentWrapper>
+                  <TinySpecs>{day}</TinySpecs>
+                  <TinySpecs> {time} </TinySpecs>
+                  <TinySpecs> {wind} </TinySpecs>
+                  <TinySpecs> {humidity} </TinySpecs>
+                </SidebarContentWrapper>
               </ContentWrapper>
             </Column>
           </Row>

@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { ContentWrapper } from "./styles";
 import { Container, Row, Column } from "../../styles/grid";
 import WeatherInfo from "./WeatherInfo";
+import Icon from "../common/Icon";
+import { white } from "../../styles/settings";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
 import moment from "moment";
-// import { translate } from "../../utils/i18n";
+import { translate } from "../../utils/i18n";
 import { formatHumidity } from "../../utils/formatNumber";
 class Forecast extends Component {
   async componentDidMount() {
@@ -29,7 +31,6 @@ class Forecast extends Component {
       respForward,
       unit
     } = this.props;
-    console.log(respForward, unit);
     return (
       <ContentWrapper>
         {isFilled && (
@@ -38,10 +39,13 @@ class Forecast extends Component {
               <Column>
                 <WeatherInfo
                   city={updatedCity}
-                  temperature={`${currently.temperature}`}
+                  temperature={`${currently.temperature}${translate(
+                    "TEMPERATURE"
+                  )}`}
                   day={moment.unix(currently.time).format("lll")}
-                  wind={currently.windSpeed}
+                  wind={`${currently.windSpeed} ${translate("WIND_SPEED")}`}
                   humidity={formatHumidity(currently.humidity)}
+                  icon={<Icon type="Menu" color={white} />}
                 />
               </Column>
             </Row>

@@ -52,7 +52,7 @@ const FaviconPlugin = new FaviconsWebpackPlugin({
 });
 
 const config = {
-  entry: "./src/app/App.js",
+  entry: "./src/app/index.js",
   output: {
     path: path.resolve(__dirname, "static"),
     filename: "bundle.js"

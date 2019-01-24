@@ -32,3 +32,19 @@ export const TinySpecs = styled.h3`
   padding: 0;
   font-family: "RobotoSlab Regular";
 `;
+
+export const MainContentWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  width: 70%;
+  border: solid 1px blue;
+`;
+
+export const SidebarContentWrapper = styled.div`
+  display: flex;
+  justify-content: content;
+  align-content: flex-end;
+  width: 30%;
+  border: solid 1px red;
+`;

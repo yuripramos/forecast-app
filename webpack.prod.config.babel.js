@@ -94,7 +94,7 @@ const config = {
     }
   },
   entry: {
-    app: "./src/app/App.js",
+    app: "./src/app/index.js",
     vendor: ["react", "react-dom"]
   },
   output: {
