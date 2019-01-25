@@ -96,7 +96,7 @@ class WeatherInfo extends Component {
                 width={"180"}
                 to={{
                   pathname: "/forecast",
-                  search: `?time-machine-request`
+                  search: `?time-machine-request&search=${city}`
                 }}
                 loading={isLoading}
                 onClick={this.handleConfirmButton}

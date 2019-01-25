@@ -1,5 +1,6 @@
 import React from "react";
 import { string } from "prop-types";
+
 import ClearDay from "./ClearDay";
 import Rain from "./Rain";
 import ClearNight from "./ClearNight";
@@ -33,12 +34,10 @@ const IconGenerator = props => {
     default:
       return;
   }
-}
+};
 
 IconGenerator.propTypes = {
   name: string
 };
 
-
 export default IconGenerator;
-
