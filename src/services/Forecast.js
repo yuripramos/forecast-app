@@ -2,6 +2,8 @@ import axios from "axios";
 import moment from "moment";
 
 export async function getForwardGeoCode(city) {
+  let respArray = [];
+  //TODO return respArray to get right city name
   const responseAction = await axios
     .get(
       `
@@ -10,6 +12,7 @@ export async function getForwardGeoCode(city) {
     .then(resp => {
       const updatedCity =
         resp.data.results.length > 1 ? resp.data.results[0] : resp.data.results;
+      respArray.push(updatedCity);
       return axios.get(
         `${REVERSE_PROXY}/${API_URL}/${SECRET_KEY}/${
           updatedCity.geometry.lat
