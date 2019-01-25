@@ -9,8 +9,8 @@ import {
   SidebarContentWrapper,
   InnerContentWrapper
 } from "./styles";
-import getIcon from "../../../utils/getIcon";
-
+import IconGenerator from "../../common/Icon";
+import FutureForecast from "./FutureForecast";
 import { Container, Row, Column } from "../../../styles/grid";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
@@ -18,13 +18,13 @@ class WeatherInfo extends Component {
   render() {
     const {
       city,
-      country,
       temperature,
       day,
       wind,
       humidity,
       icon,
-      summary
+      summary,
+      nextWeek
     } = this.props;
     return (
       <ContentWrapper>
@@ -34,7 +34,7 @@ class WeatherInfo extends Component {
               <City>{city}</City>
               <InnerContentWrapper>
                 <MainContentWrapper>
-                  <Icon>{getIcon(icon, "170px", "170px")}</Icon>
+                  <Icon><IconGenerator name={icon} width={"170px"} height={"170px"} /></Icon>
                   <Temperature> {temperature} </Temperature>
                 </MainContentWrapper>
                 <SidebarContentWrapper>
@@ -44,6 +44,7 @@ class WeatherInfo extends Component {
                   <TinySpecs> Humidity: {humidity} </TinySpecs>
                 </SidebarContentWrapper>
               </InnerContentWrapper>
+              <FutureForecast forecast={nextWeek} />
             </Column>
           </Row>
         </Container>
@@ -54,6 +55,14 @@ class WeatherInfo extends Component {
 
 WeatherInfo.defaultProps = {};
 
-WeatherInfo.propTypes = {};
+WeatherInfo.propTypes = {
+  city: string,
+  temperature: string,
+  day: string,
+  wind: string,
+  humidity: string,
+  icon: string,
+  summary: string,
+};
 
 export default WeatherInfo;

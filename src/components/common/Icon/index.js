@@ -1,14 +1,14 @@
 import React from "react";
 import { string } from "prop-types";
-import ClearDay from "../components/common/Icon/ClearDay";
-import Rain from "../components/common/Icon/Rain";
-import ClearNight from "../components/common/Icon/ClearNight";
-import Snow from "../components/common/Icon/Snow";
-import Wind from "../components/common/Icon/Wind";
-import Fog from "../components/common/Icon/Fog";
-import Cloudy from "../components/common/Icon/Cloudy";
-import PartlyCloudyDay from "../components/common/Icon/PartlyCloudyDay";
-import PartlyCloudyNight from "../components/common/Icon/PartlyCloudyNight";
+import ClearDay from "./ClearDay";
+import Rain from "./Rain";
+import ClearNight from "./ClearNight";
+import Snow from "./Snow";
+import Wind from "./Wind";
+import Fog from "./Fog";
+import Cloudy from "./Cloudy";
+import PartlyCloudyDay from "./PartlyCloudyDay";
+import PartlyCloudyNight from "./PartlyCloudyNight";
 
 const IconGenerator = props => {
   switch (props.name) {

@@ -46,6 +46,7 @@ class Forecast extends Component {
                   humidity={formatHumidity(currently.humidity)}
                   icon={currently.icon}
                   summary={currently.summary}
+                  nextWeek={nextWeekStats}
                 />
               </Column>
             </Row>
