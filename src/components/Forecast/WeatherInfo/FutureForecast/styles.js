@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { rem, media } from "../../../../styles/tools";
+import { white } from "../../../../styles/settings";
 
 export const ContentWrapper = styled.div`
   text-align: center;
@@ -15,7 +16,6 @@ export const InnerContentWrapper = styled.div`
   display: inline-flex;
 `;
 
-
 export const Icon = styled.div`
   width: 100%;
   height: ${rem(60)};
@@ -23,6 +23,15 @@ export const Icon = styled.div`
 
 export const DaySpecs = styled.div`
   margin: ${rem(5)} ${rem(13)} ${rem(10)} ${rem(13)};
+  ${({ tiny }) =>
+    tiny &&
+    css`
+      padding: ${rem(20)};
+      padding: ${rem(15)};
+      border: solid 1px rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      margin: ${rem(5)} ${rem(8)} ${rem(5)} ${rem(8)};
+    `};
 `;
 
 export const Temperature = styled.h1`
@@ -32,11 +41,11 @@ export const Temperature = styled.h1`
   font-family: "RobotoSlab Thin";
   margin-top: ${rem(20)};
   width: 100%;
-   ${({ tiny }) =>
+  ${({ tiny }) =>
     tiny &&
     css`
       font-size: 1em;
-  `};
+    `};
 `;
 
 export const TinySpecs = styled.h3`
@@ -52,4 +61,9 @@ export const TinySpecs = styled.h3`
   :nth-child(2n) {
     margin: ${rem(2)} 0;
   }
+  ${({ tiny }) =>
+    tiny &&
+    css`
+      font-size: ${rem(14)};
+    `};
 `;

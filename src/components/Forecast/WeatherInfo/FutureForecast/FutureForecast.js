@@ -15,10 +15,7 @@ import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
 class FutureForecast extends Component {
   render() {
-    const {
-      forecast
-    } = this.props;
-
+    const { forecast } = this.props;
 
     return (
       <ContentWrapper>
@@ -34,16 +31,14 @@ class FutureForecast extends Component {
                         {moment.unix(e.time).format("dddd")}
                       </TinySpecs>
                       <Icon>
-                        {/* <IconGenerator
+                        <IconGenerator
                           name={e.icon}
                           width={"70px"}
                           height={"70px"}
-                        /> */}
+                        />
                       </Icon>
                       <Temperature>
-                        {`${e.temperatureLow} ${translate(
-                          "TEMPERATURE"
-                        )}`}{" "}
+                        {`${e.temperatureLow} ${translate("TEMPERATURE")}`}{" "}
                       </Temperature>
                       <Temperature tiny>
                         {`${e.temperatureHigh} ${translate("TEMPERATURE")}`}{" "}
@@ -62,7 +57,7 @@ class FutureForecast extends Component {
 FutureForecast.defaultProps = {};
 
 FutureForecast.propTypes = {
-  forecast: arrayOf,
+  forecast: arrayOf
 };
 
 export default FutureForecast;

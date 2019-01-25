@@ -32,8 +32,14 @@ class WeatherInfo extends Component {
       latitude,
       longitude,
       isTimeMachineActive,
-      forecastTimeMachine
+      forecastTimeMachine,
+      toggleForecast
     } = this.props;
+    console.log(
+      "isTimeMachineActive",
+      isTimeMachineActive,
+      forecastTimeMachine
+    );
     return (
       <ContentWrapper>
         <Container>
@@ -65,18 +71,23 @@ class WeatherInfo extends Component {
               {isTimeMachineActive ? (
                 <TimeMachineForecast forecast={forecastTimeMachine} />
               ) : (
-                  <FutureForecast forecast={nextWeek} />
-              )
-              }
+                <FutureForecast forecast={nextWeek} />
+              )}
               <Button
                 width={"180"}
                 to={{
                   pathname: "/forecast",
                   search: `?time-machine-request`
                 }}
-                onClick={() => getForecastTimeMachine(latitude, longitude)}
+                onClick={() => {
+                  !isTimeMachineActive &&
+                    getForecastTimeMachine(latitude, longitude);
+                  isTimeMachineActive && toggleForecast();
+                }}
               >
-                click here to 30-day past
+                {isTimeMachineActive
+                  ? "7-days future forecast"
+                  : "click here to 30-day past"}
               </Button>
             </Column>
           </Row>
@@ -95,7 +106,7 @@ WeatherInfo.propTypes = {
   wind: string,
   humidity: string,
   icon: string,
-  summary: string,
+  summary: string
 };
 
 export default WeatherInfo;

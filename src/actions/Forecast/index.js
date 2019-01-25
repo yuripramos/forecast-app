@@ -1,6 +1,6 @@
 import * as FORECAST_API from "../../services/Forecast";
 
-export default ()=> ({
+export default () => ({
   forwardGeocode: async (state, city) => {
     const forwardGeoCodeRequest = await FORECAST_API.getForwardGeoCode(city);
     return {
@@ -36,7 +36,12 @@ export default ()=> ({
   },
   clearSearch: () => {
     return {
-      search: {},
+      search: {}
+    };
+  },
+  toggleForecast: state => {
+    return {
+      isTimeMachineActive: !state.isTimeMachineActive
     };
   }
 });

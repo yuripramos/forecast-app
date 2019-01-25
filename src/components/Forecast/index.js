@@ -19,7 +19,8 @@ export default connect(
     citiesSearched,
     nextWeekStats,
     currently,
-    unit
+    unit,
+    toggleForecast
   }) => ({
     getForecastTimeMachine,
     forecastTimeMachine,
@@ -35,7 +36,8 @@ export default connect(
     citiesSearched,
     nextWeekStats,
     currently,
-    unit
+    unit,
+    toggleForecast
   }),
   Forecastactions
 )(Forecast);

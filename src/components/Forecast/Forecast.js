@@ -9,14 +9,9 @@ import { translate } from "../../utils/i18n";
 import { formatHumidity } from "../../utils/formatNumber";
 class Forecast extends Component {
   async componentDidMount() {
-    const {
-      forwardGeocode,
-      search,
-      clearSearch
-    } = this.props;
-    search && await forwardGeocode(search.city);
+    const { forwardGeocode, search, clearSearch } = this.props;
+    search && (await forwardGeocode(search.city));
     clearSearch();
-
   }
   render() {
     const {
@@ -31,7 +26,8 @@ class Forecast extends Component {
       longitude,
       currently,
       unit,
-      isTimeMachineActive
+      isTimeMachineActive,
+      toggleForecast
     } = this.props;
     return (
       <ContentWrapper>
@@ -58,6 +54,7 @@ class Forecast extends Component {
                   longitude={longitude}
                   isTimeMachineActive={isTimeMachineActive}
                   forecastTimeMachine={forecastTimeMachine}
+                  toggleForecast={toggleForecast}
                 />
               </Column>
             </Row>

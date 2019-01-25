@@ -7,9 +7,9 @@ import {
   Temperature,
   TinySpecs,
   Icon,
-  DaySpecs,
-  InnerContentWrapper
+  DaySpecs
 } from "../FutureForecast/styles";
+import { InnerWrapper } from "./styles";
 import { Container, Row, Column } from "../../../../styles/grid";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
@@ -21,26 +21,25 @@ class FutureForecast extends Component {
         <Container>
           <Row>
             <Column>
-              <InnerContentWrapper>
-                {forecast
-                  .map((e, i) => (
-                    <DaySpecs key={i}>
-                      <TinySpecs>
-                        {moment.unix(e.currently.time).format("dddd")}
-                      </TinySpecs>
-                      <Icon>
-                        {/* <IconGenerator
-                          name={e.currently.icon}
-                          width={"70px"}
-                          height={"70px"}
-                        /> */}
-                      </Icon>
-                      <Temperature tiny>
-                        {`${e.currently.temperature} ${translate("TEMPERATURE")}`}{" "}
-                      </Temperature>
-                    </DaySpecs>
-                  ))}
-              </InnerContentWrapper>
+              <InnerWrapper>
+                {forecast.map((e, i) => (
+                  <DaySpecs key={i} tiny>
+                    <TinySpecs tiny>
+                      {moment.unix(e.currently.time).format("L")}
+                    </TinySpecs>
+                    <Icon>
+                      <IconGenerator
+                        name={e.currently.icon}
+                        width={"50px"}
+                        height={"50px"}
+                      />
+                    </Icon>
+                    <Temperature tiny>
+                      {`${e.currently.temperature} ${translate("TEMPERATURE")}`}{" "}
+                    </Temperature>
+                  </DaySpecs>
+                ))}
+              </InnerWrapper>
             </Column>
           </Row>
         </Container>
