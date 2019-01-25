@@ -1,10 +1,10 @@
 import React, { Component } from "react";
+import WeatherInfo from "./WeatherInfo";
+import moment from "moment";
 import { ContentWrapper } from "./styles";
 import { Container, Row, Column } from "../../styles/grid";
-import WeatherInfo from "./WeatherInfo";
 import { white } from "../../styles/settings";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
-import moment from "moment";
 import { translate } from "../../utils/i18n";
 import { formatHumidity } from "../../utils/formatNumber";
 class Forecast extends Component {
@@ -30,6 +30,7 @@ class Forecast extends Component {
       respForward,
       unit
     } = this.props;
+    console.log("currently", currently);
     return (
       <ContentWrapper>
         {isFilled && (
@@ -41,6 +42,9 @@ class Forecast extends Component {
                   temperature={`${currently.temperature}${translate(
                     "TEMPERATURE"
                   )}`}
+                  apparentTemperature={`${
+                    currently.apparentTemperature
+                  }${translate("TEMPERATURE")}`}
                   day={moment.unix(currently.time).format("lll")}
                   wind={`${currently.windSpeed} ${translate("WIND_SPEED")}`}
                   humidity={formatHumidity(currently.humidity)}

@@ -22,8 +22,7 @@ export const Icon = styled.div`
 `;
 
 export const DaySpecs = styled.div`
-  width: 22%;
-  margin: ${rem(5)} ${rem(10)} ${rem(20)} ${rem(10)};
+  margin: ${rem(5)} ${rem(13)} ${rem(10)} ${rem(13)};
 `;
 
 export const Temperature = styled.h1`

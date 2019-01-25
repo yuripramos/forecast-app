@@ -24,6 +24,7 @@ class WeatherInfo extends Component {
       humidity,
       icon,
       summary,
+      apparentTemperature,
       nextWeek
     } = this.props;
     return (
@@ -34,8 +35,18 @@ class WeatherInfo extends Component {
               <City>{city}</City>
               <InnerContentWrapper>
                 <MainContentWrapper>
-                  <Icon><IconGenerator name={icon} width={"170px"} height={"170px"} /></Icon>
+                  <Icon>
+                    <IconGenerator
+                      name={icon}
+                      width={"170px"}
+                      height={"170px"}
+                    />
+                  </Icon>
                   <Temperature> {temperature} </Temperature>
+                  <TinySpecs tiny>
+                    Apparent temperature
+                    <Temperature tiny>{apparentTemperature}</Temperature>
+                  </TinySpecs>
                 </MainContentWrapper>
                 <SidebarContentWrapper>
                   <TinySpecs>{day}</TinySpecs>

@@ -1,4 +1,7 @@
 import React, { Component, Fragment } from "react";
+import IconGenerator from "../../../common/Icon";
+import moment from "moment";
+import { translate } from "../../../../utils/i18n";
 import {
   ContentWrapper,
   Temperature,
@@ -9,7 +12,6 @@ import {
   SidebarContentWrapper,
   InnerContentWrapper
 } from "./styles";
-import IconGenerator from "../../../common/Icon";
 import { Container, Row, Column } from "../../../../styles/grid";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
@@ -24,20 +26,30 @@ class FutureForecast extends Component {
           <Row>
             <Column>
               <InnerContentWrapper>
-                {forecast.map((e, i) => (
-                  <DaySpecs>
-                    <TinySpecs> dia </TinySpecs>
-                    <Icon>
-                      <IconGenerator
-                        name={e.icon}
-                        width={"70px"}
-                        height={"70px"}
-                      />
-                    </Icon>
-                    <Temperature> {e.temperatureHigh} </Temperature>
-                    <Temperature tiny>{e.temperatureLow} </Temperature>
-                  </DaySpecs>
-                ))}
+                {forecast
+                  .filter((j, k) => k > 0)
+                  .map((e, i) => (
+                    <DaySpecs key={i}>
+                      <TinySpecs>
+                        {moment.unix(e.time).format("dddd")}
+                      </TinySpecs>
+                      <Icon>
+                        <IconGenerator
+                          name={e.icon}
+                          width={"70px"}
+                          height={"70px"}
+                        />
+                      </Icon>
+                      <Temperature>
+                        {`${e.temperatureLow} ${translate(
+                          "TEMPERATURE"
+                        )}`}{" "}
+                      </Temperature>
+                      <Temperature tiny>
+                        {`${e.temperatureHigh} ${translate("TEMPERATURE")}`}{" "}
+                      </Temperature>
+                    </DaySpecs>
+                  ))}
               </InnerContentWrapper>
             </Column>
           </Row>
@@ -50,13 +62,7 @@ class FutureForecast extends Component {
 FutureForecast.defaultProps = {};
 
 FutureForecast.propTypes = {
-  city: string,
-  temperature: string,
-  day: string,
-  wind: string,
-  humidity: string,
-  icon: string,
-  summary: string
+  forecast: arrayOf,
 };
 
 export default FutureForecast;
