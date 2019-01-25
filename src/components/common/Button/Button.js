@@ -1,7 +1,7 @@
 import React from "react";
 import { bool, node, string, func, number } from "prop-types";
 import { ButtonTag, RouterLinkTag } from "./styles";
-
+import LocalLoading from "../../common/LocalLoading";
 function Button({
   children,
   onClick,
@@ -11,7 +11,8 @@ function Button({
   className,
   opacity,
   to,
-  isCallToAction
+  isCallToAction,
+  loading
 }) {
   if (to) {
     return (
@@ -21,8 +22,9 @@ function Button({
         isCallToAction={isCallToAction}
         to={to}
         disabled={disabled}
+        loading={loading}
       >
-        {children}
+        {loading ? <LocalLoading /> : children}
       </RouterLinkTag>
     );
   }
@@ -60,7 +62,8 @@ Button.propTypes = {
   onClick: func,
   className: string,
   opacity: number,
-  to: string
+  to: string,
+  loading: bool
 };
 
 export default Button;

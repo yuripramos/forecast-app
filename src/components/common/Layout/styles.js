@@ -1,6 +1,14 @@
-import styled from "styled-components";
-import { rem } from "../../../styles/tools";
+import styled, { css } from "styled-components";
+import { media, rem } from "../../../styles/tools";
 
 export const Content = styled.div`
-  min-height: calc(100vh - ${rem(500)});
+  ${media.sm(css`
+    min-height: calc(100vh - ${rem(250)});
+  `)};
+  ${media.md(css`
+    min-height: calc(100vh - ${rem(250)});
+  `)};
+  ${media.lg(css`
+    min-height: calc(100vh - ${rem(320)});
+  `)};
 `;

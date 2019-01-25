@@ -14,9 +14,35 @@ import IconGenerator from "../../common/Icon";
 import FutureForecast from "./FutureForecast";
 import TimeMachineForecast from "./TimeMachineForecast";
 import { Container, Row, Column } from "../../../styles/grid";
-import { string, arrayOf, shape, number, func, bool } from "prop-types";
+import { string, arrayOf, number, bool } from "prop-types";
 
 class WeatherInfo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: false
+    };
+    this.handleConfirmButton = this.handleConfirmButton.bind(this);
+  }
+
+  async handleConfirmButton() {
+    const {
+      isTimeMachineActive,
+      latitude,
+      longitude,
+      toggleForecast,
+      getForecastTimeMachine
+    } = this.props;
+
+    this.setState({
+      isLoading: true
+    });
+    !isTimeMachineActive && (await getForecastTimeMachine(latitude, longitude));
+    isTimeMachineActive && toggleForecast();
+    this.setState({
+      isLoading: false
+    });
+  }
   render() {
     const {
       city,
@@ -28,18 +54,10 @@ class WeatherInfo extends Component {
       summary,
       apparentTemperature,
       nextWeek,
-      getForecastTimeMachine,
-      latitude,
-      longitude,
-      isTimeMachineActive,
-      forecastTimeMachine,
-      toggleForecast
-    } = this.props;
-    console.log(
-      "isTimeMachineActive",
       isTimeMachineActive,
       forecastTimeMachine
-    );
+    } = this.props;
+    const { isLoading } = this.state;
     return (
       <ContentWrapper>
         <Container>
@@ -79,11 +97,8 @@ class WeatherInfo extends Component {
                   pathname: "/forecast",
                   search: `?time-machine-request`
                 }}
-                onClick={() => {
-                  !isTimeMachineActive &&
-                    getForecastTimeMachine(latitude, longitude);
-                  isTimeMachineActive && toggleForecast();
-                }}
+                loading={isLoading}
+                onClick={this.handleConfirmButton}
               >
                 {isTimeMachineActive
                   ? "7-days future forecast"
@@ -106,7 +121,11 @@ WeatherInfo.propTypes = {
   wind: string,
   humidity: string,
   icon: string,
-  summary: string
+  summary: string,
+  nextWeek: arrayOf,
+  apparentTemperature: number,
+  isTimeMachineActive: bool,
+  forecastTimeMachine: arrayOf
 };
 
 export default WeatherInfo;

@@ -8,14 +8,14 @@ export const ContentWrapper = styled.div`
   padding: ${rem(35)} 0;
 `;
 
-export const ListLinks = styled.div`
+export const Signature = styled.div`
   color: ${grey10};
   font-family: "Helveticaneue Thin";
   font-size: ${rem(10)};
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: ${rem(15)};
+  margin-top: ${rem(5)};
   width: 100%;
   ${media.sm(css`
     font-size: ${rem(12)};

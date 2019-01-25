@@ -1,7 +1,6 @@
 import React from "react";
-import { Links, ListLinks, ContentWrapper } from "./styles";
+import { Signature, ContentWrapper } from "./styles";
 import { Container, Row, Column } from "../../styles/grid";
-import { Menu } from "../../utils/getMenuFooter";
 
 function Footer() {
   return (
@@ -10,11 +9,7 @@ function Footer() {
         <Row />
         <Row>
           <Column>
-            <ListLinks>
-              {Menu.map((c, i) => (
-                <Links key={i}>{c}</Links>
-              ))}
-            </ListLinks>
+            <Signature>made with 💛 by Yuri Ramos</Signature>
           </Column>
         </Row>
       </Container>
