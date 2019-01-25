@@ -1,5 +1,6 @@
 import React from "react";
 import { string, element } from "prop-types";
+
 import { HideStyle } from "./styles";
 
 function Hide({ children, below, above }) {

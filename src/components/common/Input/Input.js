@@ -1,7 +1,7 @@
 import React from "react";
 import { string, number, oneOfType, bool } from "prop-types";
+
 import { InputWrapper, InputField } from "./styles";
-// import Icon from "../Icon";
 
 function Input({ width, height, type, value, placeholder, checked, ...props }) {
   return (

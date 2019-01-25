@@ -1,5 +1,6 @@
 import React from "react";
-import { bool, node, string, func, number } from "prop-types";
+import { bool, node, string, func, number, oneOfType, shape } from "prop-types";
+
 import { ButtonTag, RouterLinkTag } from "./styles";
 import LocalLoading from "../../common/LocalLoading";
 function Button({
@@ -62,8 +63,8 @@ Button.propTypes = {
   onClick: func,
   className: string,
   opacity: number,
-  to: string,
-  loading: bool
+  to: oneOfType([shape, string]),
+  loading: bool // eslint-disable-line
 };
 
 export default Button;

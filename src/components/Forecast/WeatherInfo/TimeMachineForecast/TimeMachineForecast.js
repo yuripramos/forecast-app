@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import IconGenerator from "../../../common/Icon";
 import moment from "moment";
+import { arrayOf } from "prop-types";
+
+import IconGenerator from "../../../common/Icon";
 import { translate } from "../../../../utils/i18n";
 import {
   ContentWrapper,
@@ -11,7 +13,6 @@ import {
 } from "../FutureForecast/styles";
 import { InnerWrapper } from "./styles";
 import { Container, Row, Column } from "../../../../styles/grid";
-import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
 class FutureForecast extends Component {
   render() {

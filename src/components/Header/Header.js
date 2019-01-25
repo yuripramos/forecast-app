@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { shape, func, string } from "prop-types";
+
 import { HeaderWrapper, Title, TitleWrapper, InputWrapper } from "./styles";
 import { Container, Row, Column } from "../../styles/grid";
-import { shape, func, string } from "prop-types";
 import Button from "../common/Button";
 import Input from "../common/Input";
 

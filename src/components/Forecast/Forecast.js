@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import WeatherInfo from "./WeatherInfo";
 import moment from "moment";
+
 import { ContentWrapper } from "./styles";
 import { Container, Row, Column } from "../../styles/grid";
-import { white } from "../../styles/settings";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
 import { translate } from "../../utils/i18n";
 import { formatHumidity } from "../../utils/formatNumber";
@@ -17,15 +17,12 @@ class Forecast extends Component {
     const {
       forecastTimeMachine,
       getForecastTimeMachine,
-      search,
       updatedCity,
       isFilled,
-      citiesSearched,
       nextWeekStats,
       latitude,
       longitude,
       currently,
-      unit,
       isTimeMachineActive,
       toggleForecast
     } = this.props;
@@ -69,7 +66,20 @@ Forecast.defaultProps = {};
 
 Forecast.propTypes = {
   getForecast: func,
-  forecast: func
+  forecast: func,
+  forecastTimeMachine: arrayOf,
+  getForecastTimeMachine: func,
+  search: shape,
+  updatedCity: string,
+  isFilled: bool,
+  citiesSearched: arrayOf,
+  nextWeekStats: arrayOf,
+  latitude: number,
+  longitude: number,
+  currently: arrayOf,
+  unit: string,
+  isTimeMachineActive: bool,
+  toggleForecast: func
 };
 
 export default Forecast;

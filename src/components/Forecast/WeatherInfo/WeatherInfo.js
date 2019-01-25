@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { string, arrayOf, number, bool } from "prop-types";
+
 import {
   ContentWrapper,
   Temperature,
@@ -14,7 +16,6 @@ import IconGenerator from "../../common/Icon";
 import FutureForecast from "./FutureForecast";
 import TimeMachineForecast from "./TimeMachineForecast";
 import { Container, Row, Column } from "../../../styles/grid";
-import { string, arrayOf, number, bool } from "prop-types";
 
 class WeatherInfo extends Component {
   constructor(props) {

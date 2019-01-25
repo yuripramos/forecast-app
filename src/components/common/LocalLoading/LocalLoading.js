@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Wrapper, InnerWrapper, Bar } from "./styles";
 
 function LocalLoading() {
