@@ -8,19 +8,21 @@ export default ()=> ({
       updatedCity: state.search.city,
       citiesSearched: [...state.citiesSearched, state.search.city],
       longitude: forwardGeoCodeRequest.data.longitude,
+      latitude: forwardGeoCodeRequest.data.latitude,
       nextWeekStats: forwardGeoCodeRequest.data.daily.data,
       currently: forwardGeoCodeRequest.data.currently,
       respForward: forwardGeoCodeRequest,
       unit: forwardGeoCodeRequest.data.flags.units
     };
   },
-  getForecast: async (_, latitude, longitute) => {
-    const getForecastRequest = await FORECAST_API.getForecast(
+  getForecastTimeMachine: async (state, latitude, longitute) => {
+    const getForecastTimeMachineRequest = await FORECAST_API.getForecastTimeMachine(
       latitude,
       longitute
     );
     return {
-      forecast: getForecastRequest
+      forecastTimeMachine: getForecastTimeMachineRequest,
+      isTimeMachineActive: true
     };
   },
   handleUserInput: (state, e) => {

@@ -1,4 +1,5 @@
 import axios from "axios";
+import moment from "moment";
 
 export async function getForecast(latitude, longitute) {
   try {
@@ -32,20 +33,24 @@ export async function getForwardGeoCode(city) {
 }
 
 
-//TO-DO
-// export async function timeMachineForecast(lat, lng) {
-//   let axiosArray = [];
+export async function getForecastTimeMachine(lat, lng) {
+  let axiosArray = [];
 
-//   for(i=0; i<30; i++) {
-//     moment().subtract(i+1, 'days').format('X');
+  for(let i=0; i<30; i++) {
+    axiosArray.push(axios.get(
+      `${REVERSE_PROXY}/${API_URL}/${SECRET_KEY}/${lat
+      },${lng},${moment().subtract(i + 1, 'days').format('X')}`
+    ))
+  }
 
-//   }
+  const responseAction = axios
+    .all(axiosArray)
+    .then(function(results){
+      let temp = results.map(r => r.data);
+      return temp;
+    }).catch(error => { //eslint-disable-line
+      console.log(error);
+    });
 
-//   axios
-//     .all(axiosArray)
-//     .then(axios.spread((...responses)) => {
-//       responses.forEach(res => console.log('Success'))
-//     console.log('submitted all axios calls');
-//     })
-//     .catch(error => { })
-// }
+  return responseAction;
+}

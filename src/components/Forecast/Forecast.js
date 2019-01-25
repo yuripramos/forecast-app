@@ -20,17 +20,19 @@ class Forecast extends Component {
   }
   render() {
     const {
-      forecast,
+      forecastTimeMachine,
+      getForecastTimeMachine,
       search,
       updatedCity,
       isFilled,
       citiesSearched,
       nextWeekStats,
+      latitude,
+      longitude,
       currently,
-      respForward,
-      unit
+      unit,
+      isTimeMachineActive
     } = this.props;
-    console.log("currently", currently);
     return (
       <ContentWrapper>
         {isFilled && (
@@ -51,6 +53,11 @@ class Forecast extends Component {
                   icon={currently.icon}
                   summary={currently.summary}
                   nextWeek={nextWeekStats}
+                  getForecastTimeMachine={getForecastTimeMachine}
+                  latitude={latitude}
+                  longitude={longitude}
+                  isTimeMachineActive={isTimeMachineActive}
+                  forecastTimeMachine={forecastTimeMachine}
                 />
               </Column>
             </Row>

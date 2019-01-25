@@ -5,13 +5,15 @@ import Forecastactions from "../../actions/Forecast";
 
 export default connect(
   ({
-    getForecast,
-    forecast,
+    getForecastTimeMachine,
+    forecastTimeMachine,
+    isTimeMachineActive,
     search,
     forwardGeocode,
     respForward,
     clearSearch,
-    geometry,
+    longitude,
+    latitude,
     updatedCity,
     isFilled,
     citiesSearched,
@@ -19,13 +21,15 @@ export default connect(
     currently,
     unit
   }) => ({
-    getForecast,
-    forecast,
+    getForecastTimeMachine,
+    forecastTimeMachine,
+    isTimeMachineActive,
     search,
     forwardGeocode,
     respForward,
     clearSearch,
-    geometry,
+    longitude,
+    latitude,
     updatedCity,
     isFilled,
     citiesSearched,

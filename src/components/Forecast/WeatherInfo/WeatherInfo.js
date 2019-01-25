@@ -9,8 +9,10 @@ import {
   SidebarContentWrapper,
   InnerContentWrapper
 } from "./styles";
+import Button from "../../common/Button";
 import IconGenerator from "../../common/Icon";
 import FutureForecast from "./FutureForecast";
+import TimeMachineForecast from "./TimeMachineForecast";
 import { Container, Row, Column } from "../../../styles/grid";
 import { string, arrayOf, shape, number, func, bool } from "prop-types";
 
@@ -25,7 +27,12 @@ class WeatherInfo extends Component {
       icon,
       summary,
       apparentTemperature,
-      nextWeek
+      nextWeek,
+      getForecastTimeMachine,
+      latitude,
+      longitude,
+      isTimeMachineActive,
+      forecastTimeMachine
     } = this.props;
     return (
       <ContentWrapper>
@@ -55,7 +62,22 @@ class WeatherInfo extends Component {
                   <TinySpecs> Humidity: {humidity} </TinySpecs>
                 </SidebarContentWrapper>
               </InnerContentWrapper>
-              <FutureForecast forecast={nextWeek} />
+              {isTimeMachineActive ? (
+                <TimeMachineForecast forecast={forecastTimeMachine} />
+              ) : (
+                  <FutureForecast forecast={nextWeek} />
+              )
+              }
+              <Button
+                width={"180"}
+                to={{
+                  pathname: "/forecast",
+                  search: `?time-machine-request`
+                }}
+                onClick={() => getForecastTimeMachine(latitude, longitude)}
+              >
+                click here to 30-day past
+              </Button>
             </Column>
           </Row>
         </Container>
