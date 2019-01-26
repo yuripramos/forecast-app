@@ -3,16 +3,20 @@ import * as FORECAST_API from "../../services/Forecast";
 export default () => ({
   forwardGeocode: async (state, city) => {
     const forwardGeoCodeRequest = await FORECAST_API.getForwardGeoCode(city);
+
     return {
-      isFilled: forwardGeoCodeRequest.status === 200,
-      updatedCity: state.search.city,
+      isFilled: forwardGeoCodeRequest[1].status === 200,
+      updatedCity: `${forwardGeoCodeRequest[0].components.city ||
+        forwardGeoCodeRequest[0].components.state}, ${
+        forwardGeoCodeRequest[0].components.country
+      }`,
       citiesSearched: [...state.citiesSearched, state.search.city],
-      longitude: forwardGeoCodeRequest.data.longitude,
-      latitude: forwardGeoCodeRequest.data.latitude,
-      nextWeekStats: forwardGeoCodeRequest.data.daily.data,
-      currently: forwardGeoCodeRequest.data.currently,
-      respForward: forwardGeoCodeRequest,
-      unit: forwardGeoCodeRequest.data.flags.units
+      longitude: forwardGeoCodeRequest[1].data.longitude,
+      latitude: forwardGeoCodeRequest[1].data.latitude,
+      nextWeekStats: forwardGeoCodeRequest[1].data.daily.data,
+      currently: forwardGeoCodeRequest[1].data.currently,
+      respForward: forwardGeoCodeRequest[1],
+      unit: forwardGeoCodeRequest[1].data.flags.units
     };
   },
   getForecastTimeMachine: async (state, latitude, longitute) => {
@@ -36,7 +40,8 @@ export default () => ({
   },
   clearSearch: () => {
     return {
-      search: {}
+      search: {},
+      isTimeMachineActive: false,
     };
   },
   toggleForecast: state => {

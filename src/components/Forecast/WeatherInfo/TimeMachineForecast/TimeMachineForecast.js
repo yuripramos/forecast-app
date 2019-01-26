@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import moment from "moment";
-import { arrayOf } from "prop-types";
+import { arrayOf, shape, number, string, bool, func } from "prop-types";
 
 import IconGenerator from "../../../common/Icon";
 import { translate } from "../../../../utils/i18n";
@@ -15,9 +15,14 @@ import { InnerWrapper } from "./styles";
 import { Container, Row, Column } from "../../../../styles/grid";
 
 class FutureForecast extends Component {
+  componentDidUpdate(prevProps) {
+    const { isTimeMachineActive, clearSearch } = this.props;
+    if (isTimeMachineActive !== prevProps.isTimeMachineActive) {
+      clearSearch();
+    }
+  }
   render() {
     const { forecast } = this.props;
-    console.log("timemachine", forecast);
     return (
       <ContentWrapper>
         <Container>
@@ -53,7 +58,15 @@ class FutureForecast extends Component {
 FutureForecast.defaultProps = {};
 
 FutureForecast.propTypes = {
-  forecast: arrayOf
+  forecast: arrayOf(
+    shape({
+      time: number,
+      icon: string,
+      temperature: number
+    })
+  ),
+  isTimeMachineActive: bool,
+  clearSearch: func,
 };
 
 export default FutureForecast;

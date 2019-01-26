@@ -6,6 +6,7 @@ export const ContentWrapper = styled.div`
   text-align: center;
   padding: ${rem(15)} ${rem(10)};
   min-height: ${rem(250)};
+
   ${media.md(css`
     min-height: ${rem(300)};
     padding: ${rem(20)} ${rem(10)};

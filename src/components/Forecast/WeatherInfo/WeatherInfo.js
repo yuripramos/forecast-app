@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { string, arrayOf, number, bool, shape } from "prop-types";
+import { string, arrayOf, number, bool, shape, func } from "prop-types";
 
 import {
   ContentWrapper,
@@ -32,7 +32,7 @@ class WeatherInfo extends Component {
       latitude,
       longitude,
       toggleForecast,
-      getForecastTimeMachine
+      getForecastTimeMachine,
     } = this.props;
 
     this.setState({
@@ -56,12 +56,13 @@ class WeatherInfo extends Component {
       apparentTemperature,
       nextWeek,
       isTimeMachineActive,
-      forecastTimeMachine
+      forecastTimeMachine,
+      clearSearch
     } = this.props;
     const { isLoading } = this.state;
     return (
       <ContentWrapper>
-        <Container>
+        <Container noPadding={true}>
           <Row>
             <Column>
               <City>{city}</City>
@@ -88,7 +89,11 @@ class WeatherInfo extends Component {
                 </SidebarContentWrapper>
               </InnerContentWrapper>
               {isTimeMachineActive ? (
-                <TimeMachineForecast forecast={forecastTimeMachine} />
+                <TimeMachineForecast
+                  forecast={forecastTimeMachine}
+                  isTimeMachineActive={isTimeMachineActive}
+                  clearSearch={clearSearch}
+                />
               ) : (
                 <FutureForecast forecast={nextWeek} />
               )}
@@ -123,6 +128,7 @@ WeatherInfo.propTypes = {
   humidity: string,
   icon: string,
   summary: string,
+  clearSearch: func,
   nextWeek: arrayOf(
     shape({
       time: number,

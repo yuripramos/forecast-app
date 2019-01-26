@@ -3,7 +3,6 @@ import moment from "moment";
 
 export async function getForwardGeoCode(city) {
   let respArray = [];
-  //TODO return respArray to get right city name
   const responseAction = await axios
     .get(
       `
@@ -25,7 +24,8 @@ export async function getForwardGeoCode(city) {
     .catch(error => {
       console.log(error); //eslint-disable-line
     });
-  return responseAction;
+    respArray.push(responseAction);
+  return respArray;
 }
 
 export async function getForecastTimeMachine(lat, lng) {
@@ -48,8 +48,7 @@ export async function getForecastTimeMachine(lat, lng) {
       return temp;
     })
     .catch(error => {
-      //eslint-disable-line
-      console.log(error);
+      console.log(error);//eslint-disable-line
     });
 
   return responseAction;

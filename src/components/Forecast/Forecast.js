@@ -24,7 +24,8 @@ class Forecast extends Component {
       longitude,
       currently,
       isTimeMachineActive,
-      toggleForecast
+      toggleForecast,
+      clearSearch
     } = this.props;
     return (
       <ContentWrapper>
@@ -52,6 +53,7 @@ class Forecast extends Component {
                   isTimeMachineActive={isTimeMachineActive}
                   forecastTimeMachine={forecastTimeMachine}
                   toggleForecast={toggleForecast}
+                  clearSearch={clearSearch}
                 />
               </Column>
             </Row>
@@ -77,6 +79,7 @@ Forecast.defaultProps = {
 
 Forecast.propTypes = {
   getForecast: func,
+  clearSearch: func,
   getForecastTimeMachine: func,
   search: shape({
     city: string

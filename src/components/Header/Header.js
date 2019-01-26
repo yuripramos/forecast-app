@@ -55,7 +55,7 @@ class Header extends Component {
                   onChange={handleUserInput}
                   value={search.city}
                   placeholder={
-                    "city, country or neighborhood, city to forecast =)"
+                    "city, country to forecast =)"
                   }
                   height={40}
                   width={100}

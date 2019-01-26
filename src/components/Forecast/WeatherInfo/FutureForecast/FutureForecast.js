@@ -39,10 +39,10 @@ class FutureForecast extends Component {
                         />
                       </Icon>
                       <Temperature>
-                        {`${e.temperatureLow} ${translate("TEMPERATURE")}`}{" "}
+                        {`${e.temperatureHigh} ${translate("TEMPERATURE")}`}{" "}
                       </Temperature>
                       <Temperature tiny>
-                        {`${e.temperatureHigh} ${translate("TEMPERATURE")}`}{" "}
+                        {`${e.temperatureLow} ${translate("TEMPERATURE")}`}{" "}
                       </Temperature>
                     </DaySpecs>
                   ))}
