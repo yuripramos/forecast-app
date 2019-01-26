@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import "./App.css";
 import Routes from "../components/Routes";
 import { Router } from "react-router-dom";
+import Modal from "../components/common/Modal";
 import { withI18n } from "../utils/i18n";
 import history from "../services/history";
 import { rem } from "../styles/tools";
@@ -23,6 +24,7 @@ function App() {
           <Fragment>
             <Routes />
             <Footer />
+            <Modal />
           </Fragment>
         </ThemeProvider>
       </Router>

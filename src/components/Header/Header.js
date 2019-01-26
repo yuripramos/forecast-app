@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { shape, func, string } from "prop-types";
+import { shape, func, string, bool } from "prop-types";
+import { MODAL_TYPES } from "../common/Modal/Modal";
 
 import { HeaderWrapper, Title, TitleWrapper, InputWrapper } from "./styles";
 import { Container, Row, Column } from "../../styles/grid";
@@ -36,8 +37,29 @@ class Header extends Component {
   }
 
   render() {
-    const { handleUserInput, search } = this.props;
+    const {
+      handleUserInput,
+      search,
+      openModal,
+      closeModal,
+      isError,
+      clearSearch
+    } = this.props;
     const { isLoading } = this.state;
+
+    if (isError) {
+      setTimeout(() => {
+        openModal({
+          title: "We are sorry but we were unable to service your request",
+          type: MODAL_TYPES.DEFAULT,
+          icon: "attention",
+          description: ["Try be more more specific e.g. Brussels, Belgium", "If the error persist try again in 5 minutes"],
+          onClose: () => closeModal()
+        });
+      },300);
+      clearSearch();
+    }
+
     return (
       <HeaderWrapper>
         <Container>
@@ -86,7 +108,7 @@ export default Header;
 
 Header.defaultProps = {
   search: {
-    city: "los angeles"
+    city: ""
   }
 };
 
@@ -94,7 +116,10 @@ Header.propTypes = {
   handleUserInput: func,
   clearSearch: func,
   forwardGeocode: func,
+  isError: bool,
   search: shape({
     city: string
-  })
+  }),
+  openModal: func,
+  closeModal: func
 };

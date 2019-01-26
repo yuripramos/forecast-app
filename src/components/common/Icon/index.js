@@ -1,6 +1,7 @@
 import React from "react";
 import { string } from "prop-types";
 
+/*ICONS*/
 import ClearDay from "./ClearDay";
 import Rain from "./Rain";
 import ClearNight from "./ClearNight";
@@ -10,6 +11,8 @@ import Fog from "./Fog";
 import Cloudy from "./Cloudy";
 import PartlyCloudyDay from "./PartlyCloudyDay";
 import PartlyCloudyNight from "./PartlyCloudyNight";
+import Attention from "./Attention";
+import Close from "./Close";
 
 const IconGenerator = props => {
   switch (props.name) {
@@ -31,6 +34,10 @@ const IconGenerator = props => {
       return <PartlyCloudyDay {...props} />;
     case "partly-cloudy-night":
       return <PartlyCloudyNight {...props} />;
+    case "attention":
+      return <Attention {...props} />;
+    case "close":
+      return <Close {...props} />;
     default:
       return;
   }

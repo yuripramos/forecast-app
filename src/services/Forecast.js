@@ -22,7 +22,7 @@ export async function getForwardGeoCode(city) {
       return res;
     })
     .catch(error => {
-      console.log(error); //eslint-disable-line
+      return error;
     });
     respArray.push(responseAction);
   return respArray;
@@ -48,7 +48,7 @@ export async function getForecastTimeMachine(lat, lng) {
       return temp;
     })
     .catch(error => {
-      console.log(error);//eslint-disable-line
+      return error.data;
     });
 
   return responseAction;

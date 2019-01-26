@@ -35,7 +35,7 @@ export const DaySpecs = styled.div`
 `;
 
 export const Temperature = styled.span`
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: 200;
   line-height: 0.75;
   font-family: "RobotoSlab Thin";
