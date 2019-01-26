@@ -17,6 +17,7 @@ import { Container, Row, Column } from "../../../../styles/grid";
 class FutureForecast extends Component {
   render() {
     const { forecast } = this.props;
+    console.log("timemachine", forecast);
     return (
       <ContentWrapper>
         <Container>

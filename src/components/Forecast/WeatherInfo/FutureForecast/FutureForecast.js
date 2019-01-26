@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { arrayOf } from "prop-types";
+import { arrayOf, shape, number, string } from "prop-types";
 import moment from "moment";
 
 import IconGenerator from "../../../common/Icon";
@@ -58,7 +58,13 @@ class FutureForecast extends Component {
 FutureForecast.defaultProps = {};
 
 FutureForecast.propTypes = {
-  forecast: arrayOf
+  forecast: arrayOf(
+    shape({
+      time: number,
+      icon: string,
+      temperatureHigh: number,
+      temperatureLow: number,
+    })),
 };
 
 export default FutureForecast;

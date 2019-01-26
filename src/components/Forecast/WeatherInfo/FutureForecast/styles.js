@@ -34,8 +34,8 @@ export const DaySpecs = styled.div`
     `};
 `;
 
-export const Temperature = styled.h1`
-  font-size: 1.5em;
+export const Temperature = styled.span`
+  font-size: 1.3em;
   font-weight: 200;
   line-height: 0.75;
   font-family: "RobotoSlab Thin";
@@ -48,7 +48,7 @@ export const Temperature = styled.h1`
     `};
 `;
 
-export const TinySpecs = styled.h3`
+export const TinySpecs = styled.span`
   color: white;
   font-weight: 100;
   line-height: 1.1;
@@ -57,6 +57,7 @@ export const TinySpecs = styled.h3`
   padding: 0;
   font-family: "OpenSans Thin";
   width: 100%;
+  font-size: 1.17em;
   margin: ${rem(10)} 0;
   :nth-child(2n) {
     margin: ${rem(2)} 0;
@@ -64,6 +65,6 @@ export const TinySpecs = styled.h3`
   ${({ tiny }) =>
     tiny &&
     css`
-      font-size: ${rem(14)};
+      font-size: ${rem(10)};
     `};
 `;

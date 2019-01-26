@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { string, arrayOf, number, bool } from "prop-types";
+import { string, arrayOf, number, bool, shape } from "prop-types";
 
 import {
   ContentWrapper,
@@ -123,10 +123,17 @@ WeatherInfo.propTypes = {
   humidity: string,
   icon: string,
   summary: string,
-  nextWeek: arrayOf,
-  apparentTemperature: number,
+  nextWeek: arrayOf(
+    shape({
+      time: number,
+      icon: string,
+      temperatureHigh: number,
+      temperatureLow: number
+    })
+  ),
+  apparentTemperature: string,
   isTimeMachineActive: bool,
-  forecastTimeMachine: arrayOf
+  forecastTimeMachine: arrayOf(shape)
 };
 
 export default WeatherInfo;

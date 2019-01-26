@@ -1,5 +1,5 @@
 import React from "react";
-import { bool, node, string, func, number, oneOfType, shape } from "prop-types";
+import { bool, node, string, func, number } from "prop-types";
 
 import { ButtonTag, RouterLinkTag } from "./styles";
 import LocalLoading from "../../common/LocalLoading";
@@ -9,7 +9,6 @@ function Button({
   type,
   disabled,
   width,
-  className,
   opacity,
   to,
   isCallToAction,
@@ -23,7 +22,7 @@ function Button({
         isCallToAction={isCallToAction}
         to={to}
         disabled={disabled}
-        loading={loading}
+        loading={loading.toString()}
       >
         {loading ? <LocalLoading /> : children}
       </RouterLinkTag>
@@ -31,12 +30,12 @@ function Button({
   }
   return (
     <ButtonTag
-      className={className}
       width={width}
       type={type}
       disabled={disabled}
       onClick={onClick}
       opacity={opacity}
+      loading={loading}
     >
       {children}
     </ButtonTag>
@@ -51,7 +50,8 @@ Button.defaultProps = {
   width: null,
   onClick: null,
   className: null,
-  to: null
+  to: null,
+  loading: false,
 };
 
 Button.propTypes = {
@@ -61,10 +61,8 @@ Button.propTypes = {
   type: string,
   width: string,
   onClick: func,
-  className: string,
   opacity: number,
-  to: oneOfType([shape, string]),
-  loading: bool // eslint-disable-line
+  loading: bool
 };
 
 export default Button;

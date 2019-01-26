@@ -13,6 +13,7 @@ class Header extends Component {
       isLoading: false
     };
     this.handleConfirmButton = this.handleConfirmButton.bind(this);
+    this._isMounted = false;
   }
 
   async handleConfirmButton() {
@@ -20,9 +21,18 @@ class Header extends Component {
       isLoading: true
     });
     await this.props.forwardGeocode(this.props.search.city);
-    this.setState({
-      isLoading: false
-    });
+    if(this._isMounted) {
+      this.setState({
+        isLoading: false
+      });
+    }
+  }
+  componentDidMount() {
+    this._isMounted = true;
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {
@@ -76,7 +86,7 @@ export default Header;
 
 Header.defaultProps = {
   search: {
-    city: ""
+    city: "los angeles"
   }
 };
 

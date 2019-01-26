@@ -62,21 +62,50 @@ class Forecast extends Component {
   }
 }
 
-Forecast.defaultProps = {};
+Forecast.defaultProps = {
+  forecastTimeMachine: null,
+  search: null,
+  updatedCity: "",
+  isFilled: false,
+  citiesSearched: [],
+  nextWeekStats: null,
+  latitude: null,
+  longitude: null,
+  currently: null,
+  isTimeMachineActive: false,
+};
 
 Forecast.propTypes = {
   getForecast: func,
-  forecast: func,
-  forecastTimeMachine: arrayOf,
   getForecastTimeMachine: func,
-  search: shape,
+  search: shape({
+    city: string
+  }),
   updatedCity: string,
   isFilled: bool,
-  citiesSearched: arrayOf,
-  nextWeekStats: arrayOf,
+  citiesSearched: arrayOf(string),
+  nextWeekStats: arrayOf(
+    shape({
+      time: number,
+      icon: string,
+    })),
+  forecastTimeMachine: arrayOf(
+    shape({
+      time: number,
+      icon: string,
+      summary: string,
+    })),
   latitude: number,
   longitude: number,
-  currently: arrayOf,
+  currently:
+    shape({
+      temperature: number,
+      apparentTemperature: number,
+      windSpeed: number,
+      humidity: number,
+      icon: string,
+      summary: string
+    }),
   unit: string,
   isTimeMachineActive: bool,
   toggleForecast: func

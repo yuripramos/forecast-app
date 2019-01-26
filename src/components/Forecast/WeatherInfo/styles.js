@@ -46,25 +46,25 @@ export const Temperature = styled.h1`
   `};
 `;
 
-export const TinySpecs = styled.h3`
-         color: white;
-         font-weight: 100;
-         line-height: 1.1;
-         letter-spacing: 0.025em;
-         margin: 0;
-         padding: 0;
-         font-family: "OpenSans Thin";
-         width: 100%;
-         margin: ${rem(10)} 0;
-         ${({ tiny }) =>
-           tiny &&
-           css`
-             font-size: .9em;
-          `};
-         :nth-child(2n) {
-           margin: ${rem(2)} 0;
-         }
-       `;
+export const TinySpecs = styled.span`
+    color: white;
+    font-weight: 100;
+    line-height: 1.1;
+    letter-spacing: 0.025em;
+    margin: 0;
+    padding: 0;
+    font-family: "OpenSans Thin";
+    width: 100%;
+    margin: ${rem(10)} 0;
+    ${({ tiny }) =>
+      tiny &&
+      css`
+        font-size: .9em;
+    `};
+    :nth-child(2n) {
+      margin: ${rem(2)} 0;
+    }
+  `;
 
 export const MainContentWrapper = styled.div`
   display: inline-flex;
