@@ -4,46 +4,43 @@ exports[`Header component should match snapshot with props 1`] = `
 <styled.header>
   <Container>
     <Row>
-      <Column
-        width="auto"
-      >
-        <styled.h1>
-          Trivia Game
-        </styled.h1>
-        <styled.h2>
-           Welcome to the Trivia Challenge 
-        </styled.h2>
-        <Hide
-          above={null}
-          below="lg"
-        >
-          <styled.div>
-            <styled.div>
-              <Icon
-                color="#FFFFFF"
-                height={33}
-                type="AndroidLogo"
-                width={33}
-              />
-            </styled.div>
-            <styled.div>
-              <Icon
-                color={null}
-                height={33}
-                type="AppleLogo"
-                width={33}
-              />
-            </styled.div>
-            <styled.div>
-              <Icon
-                color={null}
-                height={33}
-                type="MicrosoftLogo"
-                width={33}
-              />
-            </styled.div>
-          </styled.div>
-        </Hide>
+      <Column>
+        <styled.div>
+          <styled.h1>
+            Forecast App
+          </styled.h1>
+        </styled.div>
+      </Column>
+    </Row>
+    <Row>
+      <Column>
+        <styled.div>
+          <Input
+            checked={false}
+            height={40}
+            name="city"
+            placeholder="city, country to forecast =)"
+            type="text"
+            value=""
+            width={100}
+          />
+          <Button
+            className={null}
+            disabled={false}
+            loading={false}
+            onClick={[Function]}
+            to={
+              Object {
+                "pathname": "/forecast",
+                "search": "?search=",
+              }
+            }
+            type="button"
+            width="80"
+          >
+            SEARCH
+          </Button>
+        </styled.div>
       </Column>
     </Row>
   </Container>

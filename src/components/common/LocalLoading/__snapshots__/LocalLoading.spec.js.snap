@@ -3,22 +3,21 @@
 exports[`LocalLoading component should match snapshot 1`] = `
 <div
   class="sc-bdVaJa eyQUgi"
-  data-test="LocalLoading"
 >
   <div
     class="sc-bwzfXH eOoZbk"
   >
     <div
-      class="sc-htpNat edEKVO"
+      class="sc-htpNat gpdsJF"
     />
     <div
-      class="sc-htpNat edEKVO"
+      class="sc-htpNat gpdsJF"
     />
     <div
-      class="sc-htpNat edEKVO"
+      class="sc-htpNat gpdsJF"
     />
     <div
-      class="sc-htpNat edEKVO"
+      class="sc-htpNat gpdsJF"
     />
   </div>
 </div>

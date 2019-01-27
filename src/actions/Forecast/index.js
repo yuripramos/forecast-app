@@ -3,6 +3,7 @@ import * as FORECAST_API from "../../services/Forecast";
 export default () => ({
   forwardGeocode: async (state, city) => {
     const forwardGeoCodeRequest = await FORECAST_API.getForwardGeoCode(city);
+
     if (forwardGeoCodeRequest[1].status){
       return {
         isFilled: forwardGeoCodeRequest[1].status === 200,

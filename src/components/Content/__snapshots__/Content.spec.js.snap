@@ -6,22 +6,23 @@ exports[`should match snapshot 1`] = `
     <Row>
       <Column>
         <styled.h1>
-          You will be presented with 10 True or False questions
+          An title
         </styled.h1>
         <styled.h2>
-          Can you score 100%?
+          subtitle
         </styled.h2>
         <Button
           className={null}
           disabled={false}
           isCallToAction={true}
+          loading={false}
           onClick={null}
           opacity={1}
-          to="/quiz"
+          to="/forecast"
           type="button"
           width={null}
         >
-          BEGIN
+          start
         </Button>
       </Column>
     </Row>

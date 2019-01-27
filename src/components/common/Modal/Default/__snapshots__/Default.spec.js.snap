@@ -7,11 +7,9 @@ exports[`Default component should match snapshot with an open modal 1`] = `
   <styled.a
     onClick={[Function]}
   >
-    <Icon
-      color={null}
-      fixCrossAxisAlign={null}
+    <IconGenerator
       height="14"
-      type="Close"
+      name="close"
       width="14"
     />
     <styled.span>
@@ -36,11 +34,9 @@ exports[`Default component should match snapshot with an open modal with descrip
   <styled.a
     onClick={[Function]}
   >
-    <Icon
-      color={null}
-      fixCrossAxisAlign={null}
+    <IconGenerator
       height="14"
-      type="Close"
+      name="close"
       width="14"
     />
     <styled.span>
@@ -58,11 +54,9 @@ exports[`Default component should match snapshot with an open modal with descrip
   <styled.a
     onClick={[Function]}
   >
-    <Icon
-      color={null}
-      fixCrossAxisAlign={null}
+    <IconGenerator
       height="14"
-      type="Close"
+      name="close"
       width="14"
     />
     <styled.span>
@@ -75,22 +69,18 @@ exports[`Default component should match snapshot with an open modal with descrip
 exports[`Default component should match snapshot with an open modal with icon 1`] = `
 <styled.div>
   <styled.div>
-    <Icon
-      color={null}
-      fixCrossAxisAlign={null}
+    <IconGenerator
       height="37"
-      type="Close"
+      name="Close"
       width="37"
     />
   </styled.div>
   <styled.a
     onClick={[Function]}
   >
-    <Icon
-      color={null}
-      fixCrossAxisAlign={null}
+    <IconGenerator
       height="14"
-      type="Close"
+      name="close"
       width="14"
     />
     <styled.span>
@@ -108,11 +98,9 @@ exports[`Default component should match snapshot with an open modal with title 1
   <styled.a
     onClick={[Function]}
   >
-    <Icon
-      color={null}
-      fixCrossAxisAlign={null}
+    <IconGenerator
       height="14"
-      type="Close"
+      name="close"
       width="14"
     />
     <styled.span>

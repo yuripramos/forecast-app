@@ -1,7 +1,7 @@
 import React from "react";
 import { string, func, oneOfType, bool, shape, arrayOf } from "prop-types";
 import { Overlay } from "../../../styles/objects";
-
+/*eslint-disable*/
 /*Modal COMPS*/
 import DefaultModal from "./Default";
 
@@ -43,8 +43,9 @@ Modal.defaultProps = {
 
 Modal.propTypes = {
   modal: oneOfType([
-    bool,
     shape({
+      isOpen: bool,
+      type: string,
       title: string,
       icon: string,
       description: oneOfType([arrayOf(string), string]),

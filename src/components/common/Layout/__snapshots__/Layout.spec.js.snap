@@ -2,7 +2,7 @@
 
 exports[`Layout component should match snapshot with children 1`] = `
 <React.Fragment>
-  <Header />
+  <ConnectWrapper />
   <styled.div>
     <h1>
       children
