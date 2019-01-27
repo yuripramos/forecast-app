@@ -9,11 +9,6 @@ export const Container = styled(Box)`
   margin-right: auto;
   max-width: ${rem(670)};
   padding: 0 ${rem(15)};
-  ${({ noPadding }) =>
-  noPadding &&
-    css`
-    padding: 0;
-  `};
   ${media.md(css`
     max-width: ${rem(981)};
   `)};

@@ -34,7 +34,7 @@ export function isSI() {
 export async function bootstrap(unit = SI) {
   setUnit(unit);
 
-  const i18nStatus = await import(`../../../i18n/${unit}.json`);
+  const i18nStatus = await require(`../../../i18n/${unit}.json`);
 
   return setTranslations(i18nStatus);
 }

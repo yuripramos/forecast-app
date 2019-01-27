@@ -62,7 +62,7 @@ class WeatherInfo extends Component {
     const { isLoading } = this.state;
     return (
       <ContentWrapper>
-        <Container noPadding={true}>
+        <Container>
           <Row>
             <Column>
               <City>{city}</City>

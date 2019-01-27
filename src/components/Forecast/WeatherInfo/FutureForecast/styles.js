@@ -30,6 +30,7 @@ export const DaySpecs = styled.div`
       padding: ${rem(15)};
       border: solid 1px rgba(255, 255, 255, 0.2);
       border-radius: 8px;
+      width: ${rem(65)};
       margin: ${rem(5)} ${rem(8)} ${rem(5)} ${rem(8)};
     `};
 `;

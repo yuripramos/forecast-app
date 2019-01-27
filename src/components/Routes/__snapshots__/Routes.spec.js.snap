@@ -12,7 +12,7 @@ exports[`Routes component should match snapshot 1`] = `
       <Switch>
         <Route
           component={[Function]}
-          path="/quiz"
+          path="/forecast"
         />
       </Switch>
     </Route>

@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
+
 
 import TimeMachineForecast from "./TimeMachineForecast";
 
@@ -24,12 +25,15 @@ beforeEach(() => {
       }
     ],
     isTimeMachineActive: true,
-    clearSearch: jest.fn()
+    clearSearch: jest.fn(),
+    getForecastTimeMachine: jest.fn(),
+    toggleForecast: jest.fn()
   };
 });
 
-describe("FutureForecast Component", () => {
+describe("TimeMachineForecast Component", () => {
   it("should match snapshot with props", () => {
     expect(shallow(<TimeMachineForecast {...props} />)).toMatchSnapshot();
   });
+
 });

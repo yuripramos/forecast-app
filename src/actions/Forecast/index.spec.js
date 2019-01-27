@@ -95,6 +95,23 @@ describe("Forecast actions", () => {
 
       expect(Object.keys(response)).toHaveLength(9);
     })
+    it("Should forwardGeoCode with errors", async () => {
+      getForwardGeoCodeAPI.mockImplementation(() =>
+        Promise.resolve([{ empty: ""}, {empty: "" }])
+      );
+      const { forwardGeocode } = actions();
+
+      const state = {
+        citiesSearched: ["Los Angeles"],
+        search: {
+          city: "New York, USA"
+        }
+      };
+
+      const response = await forwardGeocode(state, "New York, USA");
+
+      expect(Object.keys(response)).toHaveLength(1);
+    })
   })
 
   describe("getForecastTimeMachine", () => {

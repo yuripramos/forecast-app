@@ -19,9 +19,10 @@ exports[`Header component should match snapshot with props 1`] = `
             checked={false}
             height={40}
             name="city"
+            onChange={[MockFunction]}
             placeholder="city, country to forecast =)"
             type="text"
-            value=""
+            value="brussels"
             width={100}
           />
           <Button
@@ -32,7 +33,7 @@ exports[`Header component should match snapshot with props 1`] = `
             to={
               Object {
                 "pathname": "/forecast",
-                "search": "?search=",
+                "search": "?search=brussels",
               }
             }
             type="button"

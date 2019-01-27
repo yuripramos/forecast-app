@@ -1,10 +1,13 @@
 import commonState from "./commonState";
+import { INITIAL_UNIT } from "../i18n";
 
 describe("commonState", () => {
   it("Should return the state", () => {
     expect(commonState).toEqual({
-      questions: [],
-      counter: 1
+      citiesSearched: [],
+      unit: INITIAL_UNIT,
+      isTimeMachineActive: false,
+      isError: false,
     });
   });
 });

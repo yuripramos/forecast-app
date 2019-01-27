@@ -1,130 +1,174 @@
-<testsuites name="jest tests" tests="42" failures="1" time="10.785">
-  <testsuite name="Modal component" errors="0" failures="1" skipped="0" timestamp="2019-01-27T14:27:18" time="3.7" tests="6">
-    <testcase classname="Modal component should match snapshot with a closed modal" name="Modal component should match snapshot with a closed modal" time="0.04">
-    </testcase>
-    <testcase classname="Modal component should match snapshot with an open modal" name="Modal component should match snapshot with an open modal" time="0.058">
-    </testcase>
-    <testcase classname="Modal component should match snapshot with an open modal with title" name="Modal component should match snapshot with an open modal with title" time="0.025">
-    </testcase>
-    <testcase classname="Modal component should match snapshot with an open modal with icon" name="Modal component should match snapshot with an open modal with icon" time="0.028">
-      <failure>Invariant Violation: IconGenerator(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
-    at invariant (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\react-dom\cjs\react-dom-server.node.development.js:58:15)
-    at validateRenderResult (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\react-dom\cjs\react-dom-server.node.development.js:2701:5)
-    at processChild (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\react-dom\cjs\react-dom-server.node.development.js:2797:9)
-    at resolve (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\react-dom\cjs\react-dom-server.node.development.js:2716:5)
-    at ReactDOMServerRenderer.render (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\react-dom\cjs\react-dom-server.node.development.js:3100:22)
-    at ReactDOMServerRenderer.read (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\react-dom\cjs\react-dom-server.node.development.js:3059:29)
-    at Object.renderToStaticMarkup (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\react-dom\cjs\react-dom-server.node.development.js:3541:27)
-    at Object.render (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\enzyme-adapter-react-16\build\ReactSixteenAdapter.js:567:42)
-    at render (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\enzyme\build\render.js:37:23)
-    at Object.&lt;anonymous&gt; (C:\projects\technical-assignment-front-end-engineer-yuripramos\src\components\common\Modal\Modal.spec.js:37:12)
-    at Object.asyncFn (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\jest-jasmine2\build\jasmine_async.js:82:37)
-    at resolve (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\jest-jasmine2\build\queue_runner.js:52:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\jest-jasmine2\build\queue_runner.js:39:19)
-    at promise.then (C:\projects\technical-assignment-front-end-engineer-yuripramos\node_modules\jest-jasmine2\build\queue_runner.js:73:82)
-    at &lt;anonymous&gt;
-    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
-    </testcase>
-    <testcase classname="Modal component should match snapshot with an open modal with description string" name="Modal component should match snapshot with an open modal with description string" time="0.011">
-    </testcase>
-    <testcase classname="Modal component should match snapshot with an open modal with description array" name="Modal component should match snapshot with an open modal with description array" time="0.01">
+<testsuites name="jest tests" tests="64" failures="0" time="6.442">
+  <testsuite name="TimeMachineForecast Component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:14" time="0.924" tests="1">
+    <testcase classname="TimeMachineForecast Component should match snapshot with props" name="TimeMachineForecast Component should match snapshot with props" time="0.009">
     </testcase>
   </testsuite>
-  <testsuite name="Button component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:18" time="3.729" tests="6">
-    <testcase classname="Button component should match snapshot" name="Button component should match snapshot" time="0.026">
-    </testcase>
-    <testcase classname="Button component should render an &quot;button&quot; tag" name="Button component should render an &quot;button&quot; tag" time="0.127">
-    </testcase>
-    <testcase classname="Button component should render highlighted class when isCallToAction is truthy" name="Button component should render highlighted class when isCallToAction is truthy" time="0.002">
-    </testcase>
-    <testcase classname="Button component should render disabled class when disabled is truthy" name="Button component should render disabled class when disabled is truthy" time="0.002">
-    </testcase>
-    <testcase classname="Button component should render different types" name="Button component should render different types" time="0.002">
-    </testcase>
-    <testcase classname="Button component should render different widths" name="Button component should render different widths" time="0.001">
+  <testsuite name="App component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:15" time="0.44" tests="1">
+    <testcase classname="App component should match snapshot" name="App component should match snapshot" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:18" time="3.839" tests="1">
-    <testcase classname=" should match snapshot" name=" should match snapshot" time="0.035">
+  <testsuite name="Header component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:16" time="0.34" tests="2">
+    <testcase classname="Header component should match snapshot with props" name="Header component should match snapshot with props" time="0.003">
+    </testcase>
+    <testcase classname="Header component should call handleConfirmButton" name="Header component should call handleConfirmButton" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="LocalLoading component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:18" time="3.646" tests="1">
-    <testcase classname="LocalLoading component should match snapshot" name="LocalLoading component should match snapshot" time="0.114">
+  <testsuite name="FutureForecast Component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:16" time="0.229" tests="2">
+    <testcase classname="FutureForecast Component should match snapshot with props" name="FutureForecast Component should match snapshot with props" time="0.005">
+    </testcase>
+    <testcase classname="FutureForecast Component should call toggleforecast when timeMachine is active" name="FutureForecast Component should call toggleforecast when timeMachine is active" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="renderDescription" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:18" time="3.638" tests="10">
-    <testcase classname="renderDescription should return a single description" name="renderDescription should return a single description" time="0.022">
-    </testcase>
-    <testcase classname="renderDescription should return multiple descriptions" name="renderDescription should return multiple descriptions" time="0.003">
-    </testcase>
-    <testcase classname="renderDescription should return no descriptions" name="renderDescription should return no descriptions" time="0">
-    </testcase>
-    <testcase classname="Default component should match snapshot with a closed modal" name="Default component should match snapshot with a closed modal" time="0.008">
-    </testcase>
-    <testcase classname="Default component should match snapshot with an open modal" name="Default component should match snapshot with an open modal" time="0.007">
-    </testcase>
-    <testcase classname="Default component should match snapshot with an open modal with title" name="Default component should match snapshot with an open modal with title" time="0.002">
-    </testcase>
-    <testcase classname="Default component should trigger modalSettings.onClose prop when click on NO button" name="Default component should trigger modalSettings.onClose prop when click on NO button" time="0.006">
-    </testcase>
-    <testcase classname="Default component should match snapshot with an open modal with icon" name="Default component should match snapshot with an open modal with icon" time="0.002">
-    </testcase>
-    <testcase classname="Default component should match snapshot with an open modal with description string" name="Default component should match snapshot with an open modal with description string" time="0.002">
-    </testcase>
-    <testcase classname="Default component should match snapshot with an open modal with description array" name="Default component should match snapshot with an open modal with description array" time="0.002">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:16" time="0.187" tests="1">
+    <testcase classname=" should match snapshot" name=" should match snapshot" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Input component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:22" time="0.669" tests="2">
-    <testcase classname="Input component should match snapshot" name="Input component should match snapshot" time="0.013">
-    </testcase>
-    <testcase classname="Input component should match snapshot with label" name="Input component should match snapshot with label" time="0.004">
+  <testsuite name="Routes component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:16" time="0.202" tests="1">
+    <testcase classname="Routes component should match snapshot" name="Routes component should match snapshot" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="Hide component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:22" time="0.703" tests="3">
-    <testcase classname="Hide component should match snapshot changing class" name="Hide component should match snapshot changing class" time="0.054">
+  <testsuite name="Forecast actions" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:17" time="0.159" tests="7">
+    <testcase classname="Forecast actions should return an action object" name="Forecast actions should return an action object" time="0.001">
     </testcase>
-    <testcase classname="Hide component should match snapshot changing class" name="Hide component should match snapshot changing class" time="0.011">
+    <testcase classname="Forecast actions forwardGeoCode Should forwardGeoCode with success" name="Forecast actions forwardGeoCode Should forwardGeoCode with success" time="0.001">
     </testcase>
-    <testcase classname="Hide component should match snapshot changing class" name="Hide component should match snapshot changing class" time="0.003">
+    <testcase classname="Forecast actions forwardGeoCode Should forwardGeoCode with errors" name="Forecast actions forwardGeoCode Should forwardGeoCode with errors" time="0">
     </testcase>
-  </testsuite>
-  <testsuite name="Forecast actions" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:22" time="0.734" tests="6">
-    <testcase classname="Forecast actions should return an action object" name="Forecast actions should return an action object" time="0.008">
-    </testcase>
-    <testcase classname="Forecast actions forwardGeoCode Should forwardGeoCode with success" name="Forecast actions forwardGeoCode Should forwardGeoCode with success" time="0.003">
-    </testcase>
-    <testcase classname="Forecast actions getForecastTimeMachine Should getForecastTimeMachine with success" name="Forecast actions getForecastTimeMachine Should getForecastTimeMachine with success" time="0.001">
+    <testcase classname="Forecast actions getForecastTimeMachine Should getForecastTimeMachine with success" name="Forecast actions getForecastTimeMachine Should getForecastTimeMachine with success" time="0">
     </testcase>
     <testcase classname="Forecast actions clearSearch Should clearSearch with success" name="Forecast actions clearSearch Should clearSearch with success" time="0.001">
     </testcase>
-    <testcase classname="Forecast actions handleUserInput Should return the updated state search obj" name="Forecast actions handleUserInput Should return the updated state search obj" time="0.001">
+    <testcase classname="Forecast actions handleUserInput Should return the updated state search obj" name="Forecast actions handleUserInput Should return the updated state search obj" time="0">
     </testcase>
     <testcase classname="Forecast actions toggleForecast Should return the updated state isTimeMachineActive" name="Forecast actions toggleForecast Should return the updated state isTimeMachineActive" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="modal action" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:22" time="0.568" tests="3">
-    <testcase classname="modal action Should return an action object" name="modal action Should return an action object" time="0.006">
+  <testsuite name="Layout component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:17" time="0.188" tests="1">
+    <testcase classname="Layout component should match snapshot with children" name="Layout component should match snapshot with children" time="0.001">
     </testcase>
-    <testcase classname="modal action openModal Should change state to have an open modal" name="modal action openModal Should change state to have an open modal" time="0.001">
+  </testsuite>
+  <testsuite name="Button component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:17" time="0.193" tests="6">
+    <testcase classname="Button component should match snapshot" name="Button component should match snapshot" time="0.001">
+    </testcase>
+    <testcase classname="Button component should render an &quot;button&quot; tag" name="Button component should render an &quot;button&quot; tag" time="0.025">
+    </testcase>
+    <testcase classname="Button component should render highlighted class when isCallToAction is truthy" name="Button component should render highlighted class when isCallToAction is truthy" time="0.001">
+    </testcase>
+    <testcase classname="Button component should render disabled class when disabled is truthy" name="Button component should render disabled class when disabled is truthy" time="0">
+    </testcase>
+    <testcase classname="Button component should render different types" name="Button component should render different types" time="0">
+    </testcase>
+    <testcase classname="Button component should render different widths" name="Button component should render different widths" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Modal component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:17" time="0.191" tests="6">
+    <testcase classname="Modal component should match snapshot with a closed modal" name="Modal component should match snapshot with a closed modal" time="0.007">
+    </testcase>
+    <testcase classname="Modal component should match snapshot with an open modal" name="Modal component should match snapshot with an open modal" time="0.014">
+    </testcase>
+    <testcase classname="Modal component should match snapshot with an open modal with title" name="Modal component should match snapshot with an open modal with title" time="0.003">
+    </testcase>
+    <testcase classname="Modal component should match snapshot with an open modal with icon" name="Modal component should match snapshot with an open modal with icon" time="0.004">
+    </testcase>
+    <testcase classname="Modal component should match snapshot with an open modal with description string" name="Modal component should match snapshot with an open modal with description string" time="0.003">
+    </testcase>
+    <testcase classname="Modal component should match snapshot with an open modal with description array" name="Modal component should match snapshot with an open modal with description array" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="FutureForecast Component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:17" time="0.181" tests="1">
+    <testcase classname="FutureForecast Component should match snapshot with props" name="FutureForecast Component should match snapshot with props" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="FutureForecast Component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:18" time="0.163" tests="1">
+    <testcase classname="FutureForecast Component should match snapshot with props" name="FutureForecast Component should match snapshot with props" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="i18n" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:18" time="0.168" tests="10">
+    <testcase classname="i18n setTranslations Should set the translations data" name="i18n setTranslations Should set the translations data" time="0.001">
+    </testcase>
+    <testcase classname="i18n getUnit Should return the current unit" name="i18n getUnit Should return the current unit" time="0.001">
+    </testcase>
+    <testcase classname="i18n isSi Should return true if unit is si" name="i18n isSi Should return true if unit is si" time="0">
+    </testcase>
+    <testcase classname="i18n isSi Should return false if unit is not si" name="i18n isSi Should return false if unit is not si" time="0">
+    </testcase>
+    <testcase classname="i18n isUs Should return true if unit is us" name="i18n isUs Should return true if unit is us" time="0.001">
+    </testcase>
+    <testcase classname="i18n isUs Should return false if unit is not us" name="i18n isUs Should return false if unit is not us" time="0.002">
+    </testcase>
+    <testcase classname="i18n withI18n Shouldn&apos;t render component if fetch isn&apos;t done" name="i18n withI18n Shouldn&apos;t render component if fetch isn&apos;t done" time="0.008">
+    </testcase>
+    <testcase classname="i18n withI18n Should render component only if fetch is done" name="i18n withI18n Should render component only if fetch is done" time="0.002">
+    </testcase>
+    <testcase classname="i18n withI18n Should set language when subscribe is triggered" name="i18n withI18n Should set language when subscribe is triggered" time="0.002">
+    </testcase>
+    <testcase classname="i18n withI18n Should unlisten state when unmounted" name="i18n withI18n Should unlisten state when unmounted" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="Footer component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:18" time="0.158" tests="1">
+    <testcase classname="Footer component should match snapshot" name="Footer component should match snapshot" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Hide component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:18" time="0.162" tests="3">
+    <testcase classname="Hide component should match snapshot changing class" name="Hide component should match snapshot changing class" time="0.003">
+    </testcase>
+    <testcase classname="Hide component should match snapshot changing class" name="Hide component should match snapshot changing class" time="0">
+    </testcase>
+    <testcase classname="Hide component should match snapshot changing class" name="Hide component should match snapshot changing class" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="renderDescription" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:18" time="0.158" tests="10">
+    <testcase classname="renderDescription should return a single description" name="renderDescription should return a single description" time="0.001">
+    </testcase>
+    <testcase classname="renderDescription should return multiple descriptions" name="renderDescription should return multiple descriptions" time="0">
+    </testcase>
+    <testcase classname="renderDescription should return no descriptions" name="renderDescription should return no descriptions" time="0.001">
+    </testcase>
+    <testcase classname="Default component should match snapshot with a closed modal" name="Default component should match snapshot with a closed modal" time="0">
+    </testcase>
+    <testcase classname="Default component should match snapshot with an open modal" name="Default component should match snapshot with an open modal" time="0.001">
+    </testcase>
+    <testcase classname="Default component should match snapshot with an open modal with title" name="Default component should match snapshot with an open modal with title" time="0">
+    </testcase>
+    <testcase classname="Default component should trigger modalSettings.onClose prop when click on NO button" name="Default component should trigger modalSettings.onClose prop when click on NO button" time="0.001">
+    </testcase>
+    <testcase classname="Default component should match snapshot with an open modal with icon" name="Default component should match snapshot with an open modal with icon" time="0">
+    </testcase>
+    <testcase classname="Default component should match snapshot with an open modal with description string" name="Default component should match snapshot with an open modal with description string" time="0.001">
+    </testcase>
+    <testcase classname="Default component should match snapshot with an open modal with description array" name="Default component should match snapshot with an open modal with description array" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="LocalLoading component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:18" time="0.156" tests="1">
+    <testcase classname="LocalLoading component should match snapshot" name="LocalLoading component should match snapshot" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Input component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:19" time="0.15" tests="2">
+    <testcase classname="Input component should match snapshot" name="Input component should match snapshot" time="0.001">
+    </testcase>
+    <testcase classname="Input component should match snapshot with label" name="Input component should match snapshot with label" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="commonState" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:19" time="0.146" tests="1">
+    <testcase classname="commonState Should return the state" name="commonState Should return the state" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="modal action" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:19" time="0.145" tests="3">
+    <testcase classname="modal action Should return an action object" name="modal action Should return an action object" time="0.001">
+    </testcase>
+    <testcase classname="modal action openModal Should change state to have an open modal" name="modal action openModal Should change state to have an open modal" time="0">
     </testcase>
     <testcase classname="modal action closeModal Should change state to have no modal" name="modal action closeModal Should change state to have no modal" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:22" time="0.588" tests="1">
-    <testcase classname=" should return true for mobile devices" name=" should return true for mobile devices" time="0.003">
+  <testsuite name="store" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:19" time="0.144" tests="2">
+    <testcase classname="store Should the store for common window" name="store Should the store for common window" time="0.001">
+    </testcase>
+    <testcase classname="store Should the store for window defined" name="store Should the store for window defined" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Header component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:18" time="4.362" tests="1">
-    <testcase classname="Header component should match snapshot with props" name="Header component should match snapshot with props" time="0.039">
-    </testcase>
-  </testsuite>
-  <testsuite name="Layout component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:18" time="4.557" tests="1">
-    <testcase classname="Layout component should match snapshot with children" name="Layout component should match snapshot with children" time="0.032">
-    </testcase>
-  </testsuite>
-  <testsuite name="Footer component" errors="0" failures="0" skipped="0" timestamp="2019-01-27T14:27:23" time="2.322" tests="1">
-    <testcase classname="Footer component should match snapshot" name="Footer component should match snapshot" time="0.01">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-01-27T22:19:19" time="0.142" tests="1">
+    <testcase classname=" should return true for mobile devices" name=" should return true for mobile devices" time="0">
     </testcase>
   </testsuite>
 </testsuites>
