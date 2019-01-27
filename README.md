@@ -36,7 +36,7 @@ I would like to share 3 arguments to choose redux-zero over redux.
 More about Redux-zero [here](https://medium.com/@matheusml/introducing-redux-zero-bea42214c7ee)
 
 ## :fire: Why Reverse Proxy?
-  Due to security issues of [DarkskyAPI](https://darksky.net/dev/docs/faq) they throw CORS error from localhost, so it's necessary to workaround this. To avoid wasting time settig-up a node+express reverse proxy server in cases like that I use this reverse proxy [service](https://thingproxy.freeboard.io/fetch).
+  Due to security issues of [DarkskyAPI](https://darksky.net/dev/docs/faq) they throw CORS error from localhost, so it's necessary to workaround this. To avoid wasting time settig-up a node+express reverse proxy server in cases like that I use this reverse proxy [service](https://thingproxy.freeboard.io/fetch). (not acessible link)
 
 ## :cloud: Installation
 
