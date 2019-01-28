@@ -6,12 +6,20 @@ import Forecastactions from "../../actions/Forecast";
 import modalActions from "../../actions/modal";
 
 export default connect(
-  ({ handleUserInput, search, clearSearch, isLoading, isError }) => ({
+  ({
     handleUserInput,
     search,
     clearSearch,
     isLoading,
-    isError
+    isError,
+    clearError
+  }) => ({
+    handleUserInput,
+    search,
+    clearSearch,
+    isLoading,
+    isError,
+    clearError
   }),
   combineActions(Forecastactions, modalActions)
 )(Header);

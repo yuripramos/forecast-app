@@ -4,7 +4,7 @@
 
 ## :octocat: Getting Started
 
-This code challenge was made focusing on the architecture of high scalable projects. The App itself is small, but is 100% ready to get as big as possible
+This code challenge was made focusing on the architecture of high scalable projects. The App itself is small but is 100% ready to get as big as possible
 
 :heavy_check_mark: Styled-Components
 
@@ -12,13 +12,17 @@ This code challenge was made focusing on the architecture of high scalable proje
 
 :heavy_check_mark: React-16
 
-:heavy_check_mark: Cross-Browser Solution! (even for MS Edge)
+:heavy_check_mark: i18n dinamic dictionary for units (only available for 3 units: us, si and uk2) :globe_with_meridians:
 
 :heavy_check_mark: High Scale Svg Icons Workflow
 
 :heavy_check_mark: Reusable High scale Modal
 
 :heavy_check_mark: Reverse Proxy
+
+:heavy_check_mark: Cross-Browser Solution! (even for MS Edge)
+
+
 
 
 Made with :heart: and Redux-zero.
@@ -36,7 +40,7 @@ I would like to share 3 arguments to choose redux-zero over redux.
 More about Redux-zero [here](https://medium.com/@matheusml/introducing-redux-zero-bea42214c7ee)
 
 ## :fire: Why Reverse Proxy?
-  Due to security issues of [DarkskyAPI](https://darksky.net/dev/docs/faq) they throw CORS error from localhost, so it's necessary to workaround this. To avoid wasting time settig-up a node+express reverse proxy server in cases like that I use this reverse proxy [service](https://thingproxy.freeboard.io/fetch). (not acessible link)
+  Due to security issues of [DarkskyAPI](https://darksky.net/dev/docs/faq#cross-origin) they throw CORS error from localhost, so it's necessary to work around this. To avoid wasting time setting-up a node+express reverse proxy server in cases like that I use this reverse proxy [service](https://thingproxy.freeboard.io/fetch). (not accessible link)
 
 ## :cloud: Installation
 
@@ -52,18 +56,18 @@ access http://localhost:3002
 
 ## Tests
 
-- % stmts = 91.46%
+- % stmts = 90.96%
 - % Branch = 71.43%
-- % funcs = 92.98%
-- % Lines = 91.46%
+- % funcs = 93.1%
+- % Lines = 91.96%
 
-- Average ~= **86.8%**
+- Average ~= **87%**
 
 ## Roadmap
 
 **Release 0.1** (current) - First release of the app
 
-**Release 0.2** - Refining UI/UX
+**Release 0.2** - Refining UI/UX and new units in dictionary
 
 **Release 0.3** - Improvements in mobile devices screens
 

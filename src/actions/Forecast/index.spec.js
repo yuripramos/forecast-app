@@ -72,6 +72,7 @@ describe("Forecast actions", () => {
         "forwardGeocode",
         "getForecastTimeMachine",
         "handleUserInput",
+        "clearError",
         "clearSearch",
         "toggleForecast"
       ]);
@@ -146,11 +147,20 @@ describe("Forecast actions", () => {
       expect(state).toEqual({
         search: {},
         isTimeMachineActive: false,
-        isError: false,
       });
     });
   });
 
+  describe("clearError", () => {
+    it("Should clearError with success", async () => {
+      const { clearError } = actions();
+      const state = clearError();
+
+      expect(state).toEqual({
+        isError: false
+      });
+    });
+  });
   describe("handleUserInput", () => {
     it("Should return the updated state search obj", () => {
       const { handleUserInput } = actions();

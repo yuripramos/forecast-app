@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Forecast App",
   "main": "/src/App.js",
+  "engines": {
+    "node": ">=8.9.3"
+  },
   "scripts": {
     "test": "set NODE_ENV=testing && jest",
     "test:update": "npm run test -- -u",

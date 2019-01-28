@@ -43,11 +43,15 @@ export default () => ({
       }
     };
   },
+  clearError: () => {
+    return {
+      isError: false,
+    };
+  },
   clearSearch: () => {
     return {
       search: {},
       isTimeMachineActive: false,
-      isError: false,
     };
   },
   toggleForecast: state => {

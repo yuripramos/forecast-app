@@ -26,6 +26,7 @@ class Header extends Component {
       this.setState({
         isLoading: false
       });
+      this.props.clearSearch();
     }
   }
   componentDidMount() {
@@ -43,7 +44,7 @@ class Header extends Component {
       openModal,
       closeModal,
       isError,
-      clearSearch
+      clearError
     } = this.props;
     const { isLoading } = this.state;
 
@@ -54,10 +55,12 @@ class Header extends Component {
           type: MODAL_TYPES.DEFAULT,
           icon: "attention",
           description: ["Try be more more specific e.g. Brussels, Belgium", "If the error persist try again in 5 minutes"],
-          onClose: () => closeModal()
+          onClose: () => {
+            clearError();
+            return closeModal()
+          }
         });
       },300);
-      clearSearch();
     }
 
     return (
@@ -115,6 +118,7 @@ Header.defaultProps = {
 Header.propTypes = {
   handleUserInput: func,
   clearSearch: func,
+  clearError: func,
   forwardGeocode: func,
   isError: bool,
   search: shape({
