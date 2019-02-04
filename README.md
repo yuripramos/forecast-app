@@ -12,7 +12,7 @@ This code challenge was made focusing on the architecture of high scalable proje
 
 :heavy_check_mark: React-16
 
-:heavy_check_mark: i18n dinamic dictionary for units (only available for 3 units: us, si and uk2) :globe_with_meridians:
+:heavy_check_mark: i18n dynamic dictionary for units (only available for 3 units: us, si and uk2) :globe_with_meridians:
 
 :heavy_check_mark: High Scale Svg Icons Workflow
 
