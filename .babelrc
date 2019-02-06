@@ -1,0 +1,56 @@
+{
+  "presets": ["es2015", "react"],
+  "env": {
+    "testing": {
+      "plugins": [
+        "babel-plugin-dynamic-import-node"
+      ],
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ]
+      ]
+    },
+    "production": {
+      "presets": ["es2015", "react"],
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "displayName": false,
+            "minify": true
+          }
+        ],
+        "transform-object-rest-spread",
+        "transform-async-to-generator"
+      ]
+    },
+    "development": {
+      "presets": [["es2015", { "modules": "umd" }], "react"],
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "displayName": true,
+            "minify": false
+          }
+        ],
+        [
+          "transform-runtime",
+          {
+            "regenerator": true
+          }
+        ],
+        "transform-object-rest-spread",
+        "transform-async-to-generator",
+        "babel-plugin-dynamic-import-node",
+        "syntax-dynamic-import"
+      ]
+    }
+  }
+}
