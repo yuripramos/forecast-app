@@ -22,10 +22,7 @@ This project was made focusing on the architecture of high scalable projects. Th
 
 :heavy_check_mark: Cross-Browser Solution! (even for MS Edge)
 
-# <<<<<<< HEAD
-
-> > > > > > > de8d858a039dd8f594b11d28d655f8de27ecd36c
-> > > > > > > Made with :heart: and Redux-zero.
+Made with :heart: and Redux-zero.
 
 ## :fire: Why Redux-zero as a state manager?
 
