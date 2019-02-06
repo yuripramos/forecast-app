@@ -1,5 +1,5 @@
 {
-  "name": "ForecastApp",
+  "name": "forecast-app",
   "version": "1.0.0",
   "description": "Forecast App",
   "main": "/src/App.js",

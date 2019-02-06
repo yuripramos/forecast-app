@@ -22,7 +22,10 @@ This project was made focusing on the architecture of high scalable projects. Th
 
 :heavy_check_mark: Cross-Browser Solution! (even for MS Edge)
 
-Made with :heart: and Redux-zero.
+# <<<<<<< HEAD
+
+> > > > > > > de8d858a039dd8f594b11d28d655f8de27ecd36c
+> > > > > > > Made with :heart: and Redux-zero.
 
 ## :fire: Why Redux-zero as a state manager?
 
@@ -38,13 +41,24 @@ More about Redux-zero [here](https://medium.com/@matheusml/introducing-redux-zer
 
 ## :fire: Why Reverse Proxy?
 
+<<<<<<< HEAD
+
+# Due to security issues of [DarkskyAPI](https://darksky.net/dev/docs/faq#cross-origin) they throw CORS error from localhost, so it's necessary to work around this. To avoid wasting time setting-up a node+express reverse proxy server in cases like that I use this reverse proxy [service](https://thingproxy.freeboard.io/fetch). (not accessible link)
+
 Due to security issues of [DarkskyAPI](https://darksky.net/dev/docs/faq#cross-origin) they throw CORS error from localhost, so it's necessary to work around this. To avoid wasting time setting-up a node+express reverse proxy server in cases like that I use this reverse proxy [service](https://thingproxy.freeboard.io/fetch). (not accessible link)
+
+> > > > > > > de8d858a039dd8f594b11d28d655f8de27ecd36c
 
 ## :cloud: Installation
 
 ```sh
+<<<<<<< HEAD
 git clone https://github.com/yuripramos/forecast-app.git
 cd forecast-app
+=======
+git clone https://github.com/madewithlove/technical-assignment-front-end-engineer-yuripramos
+cd technical-assignment-front-end-engineer-yuripramos
+>>>>>>> de8d858a039dd8f594b11d28d655f8de27ecd36c
 npm install or yarn install
 npm run start
 access http://localhost:3002
