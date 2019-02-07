@@ -6,7 +6,7 @@
 
 This project was made focusing on the architecture of high scalable projects. The App itself is small but is 100% ready to get as big as possible
 
-:heavy_check_mark: Styled-ComponentsS
+:heavy_check_mark: Styled-Components
 
 :heavy_check_mark: Webpack
 
@@ -38,18 +38,32 @@ More about Redux-zero [here](https://medium.com/@matheusml/introducing-redux-zer
 
 ## :fire: Why Reverse Proxy?
 
-# Due to security issues of [DarkskyAPI](https://darksky.net/dev/docs/faq#cross-origin) they throw CORS error from localhost, so it's necessary to work around this. To avoid wasting time setting-up a node+express reverse proxy server in cases like that I use this reverse proxy [service](https://thingproxy.freeboard.io/fetch). (not accessible link)
-
 Due to security issues of [DarkskyAPI](https://darksky.net/dev/docs/faq#cross-origin) they throw CORS error from localhost, so it's necessary to work around this. To avoid wasting time setting-up a node+express reverse proxy server in cases like that I use this reverse proxy [service](https://thingproxy.freeboard.io/fetch). (not accessible link)
 
 ## :cloud: Installation
 
+Makefiles aren't Windows friendly, if you have minGW64 and whole environment to run the makefile(Unix/macOS) do this:
+
 ```sh
-git clone https://github.com/madewithlove/technical-assignment-front-end-engineer-yuripramos
-cd technical-assignment-front-end-engineer-yuripramos
+git clone https://github.com/yuripramos/forecast-app
+cd forecast-app
+make installation
+make build
+make start-server
+access http://localhost:3000
+Search your desired city =)
+```
+
+If you **don't** have makefile enviroment ready, do this instead :
+
+```sh
+git clone https://github.com/yuripramos/forecast-app
+cd forecast-app
 npm install or yarn install
-npm run start
-access http://localhost:3002
+npm run build
+npm run start:server
+access http://localhost:3000
+Search your desired city =)
 ```
 
 **Requires node >= 8.9.3**

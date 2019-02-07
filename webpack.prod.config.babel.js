@@ -12,7 +12,7 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: "body"
 });
 
-const CleanPlugin = new CleanWebpackPlugin(["static"]);
+const CleanPlugin = new CleanWebpackPlugin(["build"]);
 
 const DefinePlugin = new webpack.DefinePlugin({
   "process.env": {
@@ -98,7 +98,7 @@ const config = {
     vendor: ["react", "react-dom"]
   },
   output: {
-    path: path.join(__dirname, "static"),
+    path: path.join(__dirname, "build"),
     filename: "bundle.[chunkhash].js",
     chunkFilename: "chunk.[chunkhash].js"
   },
