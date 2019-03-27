@@ -77,11 +77,11 @@ Search your desired city =)
 
 - Average ~= **87%**
 
-## :inbox_tray: Continuous Deployment
+<!-- ## :inbox_tray: Continuous Deployment
 
 I'm using [Netlify](https://app.netlify.com) to continuous deployment
 
-https://quirky-pike-865346.netlify.com/
+https://quirky-pike-865346.netlify.com/ -->
 
 ## Roadmap
 
